@@ -112,6 +112,9 @@ def run_all_arms_dev(
         if key not in index_cache:
             index_cache[key] = RAGIndex.build(strategy_name=key[0], embeddings_kind=key[1])
         median_dev = calibrate_margin_median(margin_arm, labels, index_cache[key])
+        # Round for cross-platform bit-stability of tracked calib / metrics JSON.
+        if median_dev is not None:
+            median_dev = round(float(median_dev), 6)
         calib = {
             "arm_id": "minilm_dense_k8_r1_margin",
             "median_dev": median_dev,
@@ -120,7 +123,7 @@ def run_all_arms_dev(
         }
         if write:
             (ARMS_RESULTS / "minilm_dense_k8_r1_margin_calib.json").write_text(
-                json.dumps(calib, indent=2) + "\n", encoding="utf-8"
+                json.dumps(calib, indent=2) + "\n", encoding="utf-8", newline="\n"
             )
 
     for arm in arms:

@@ -13,7 +13,7 @@
     "threshold": null,
     "rrf_k": 60,
     "margin": 0.05,
-    "median_dev": 0.5423306185081211
+    "median_dev": 0.542331
   },
   "metrics": {
     "n": 84,

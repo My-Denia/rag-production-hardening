@@ -1,6 +1,6 @@
 {
   "arm_id": "minilm_dense_k8_r1_margin",
-  "median_dev": 0.5423306185081211,
+  "median_dev": 0.542331,
   "n_dev": 84,
   "margin": 0.05
 }

@@ -75,8 +75,29 @@ def write_status(
 
 
 def write_docs_tradeoffs_v2(payload: dict[str, Any]) -> Path:
+    """Write path/time-stable tradeoffs doc (no float dumps from live recompute)."""
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     path = DOCS_DIR / "tradeoffs.md"
+    sel = payload.get("selection") or {}
+    hold = payload.get("holdout") or {}
+    primary = (sel.get("primary") or {}).get("arm_id") or hold.get("winner_id")
+    summary = {
+        "primary_arm_id": primary,
+        "shortlist_size": sel.get("shortlist_size"),
+        "baseline_arm_id": sel.get("baseline_arm_id") or hold.get("baseline_arm_id"),
+        "holdout_pass": hold.get("pass"),
+        "winner_id": hold.get("winner_id"),
+        "re_ranked_on_holdout": hold.get("re_ranked_on_holdout"),
+        "selection_rules_sha256": sel.get("selection_rules_sha256")
+        or hold.get("selection_rules_sha256"),
+        "bootstrap": {
+            "point_delta": (hold.get("bootstrap") or {}).get("point_delta"),
+            "ci_low": (hold.get("bootstrap") or {}).get("ci_low"),
+            "ci_high": (hold.get("bootstrap") or {}).get("ci_high"),
+            "seed": (hold.get("bootstrap") or {}).get("seed"),
+            "B": (hold.get("bootstrap") or {}).get("B"),
+        },
+    }
     lines = [
         "# Design tradeoffs (v2 production-hardening)",
         "",
@@ -87,16 +108,14 @@ def write_docs_tradeoffs_v2(payload: dict[str, Any]) -> Path:
         "",
         "See `config/arms.yaml` (exactly 10). Baseline arm: `hash_dense_k8_r1`.",
         "",
-        "## Selection outcome",
+        "## Selection outcome (stable summary)",
+        "",
+        "Full arm metrics live under `results/arms/` and `results/dev_shortlist.json`.",
+        "This section intentionally omits wall-clock and embedding float dumps so",
+        "`python -m rag_bench.run_all` leaves a clean tracked tree.",
         "",
         "```json",
-        json.dumps(payload.get("selection") or {}, indent=2, ensure_ascii=False)[:4000],
-        "```",
-        "",
-        "## Holdout confirmation",
-        "",
-        "```json",
-        json.dumps(payload.get("holdout") or {}, indent=2, ensure_ascii=False)[:4000],
+        json.dumps(summary, indent=2, ensure_ascii=False, sort_keys=True),
         "```",
         "",
         "## History",
@@ -111,7 +130,7 @@ def write_docs_tradeoffs_v2(payload: dict[str, Any]) -> Path:
         "```",
         "",
     ]
-    path.write_text("\n".join(lines), encoding="utf-8")
+    path.write_text("\n".join(lines), encoding="utf-8", newline="\n")
     return path
 
 
