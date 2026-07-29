@@ -625,11 +625,11 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.write_reproduction:
         p = write_reproduction(root)
-        print(f"reproduction → {p}")
+        print(f"reproduction -> {p}")
 
     if args.write_manifest:
         p = write_manifest(root)
-        print(f"manifest → {p}")
+        print(f"manifest -> {p}")
 
     scan = security_scan(root)
     release = root / "results" / "release"
@@ -649,7 +649,7 @@ def main(argv: list[str] | None = None) -> int:
     scan_path.write_text(json.dumps(out_scan, indent=2) + "\n", encoding="utf-8")
     print(
         f"scan: path_hits={scan['path_hits']} secrets={scan['high_confidence_secrets']} "
-        f"pass={scan['pass']} → {scan_path}"
+        f"pass={scan['pass']} -> {scan_path}"
     )
     if not scan["pass"]:
         for h in (scan.get("path_hit_details") or [])[:20]:
