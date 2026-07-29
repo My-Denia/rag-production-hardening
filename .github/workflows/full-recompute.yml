@@ -26,13 +26,18 @@ jobs:
           ref: ${{ inputs.ref != '' && inputs.ref || github.sha }}
           fetch-depth: 0
 
+      - name: Configure git LF for clean tree check
+        shell: bash
+        run: |
+          git config core.autocrlf false
+          git config core.eol lf
+
       - name: Record head SHA
         id: meta
         shell: bash
         run: |
           echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           echo "ref_name=$(git rev-parse --abbrev-ref HEAD)" >> "$GITHUB_OUTPUT"
-          python --version || true
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -56,32 +61,34 @@ jobs:
         run: pip install -e ".[dev,semantic]"
 
       - name: Full recompute (run_all)
-        id: run_all
         run: python -m rag_bench.run_all
 
       - name: Pytest
-        id: pytest
         run: pytest -q
 
       - name: Freeze verify
-        id: freeze
         run: python -c "from rag_bench.freeze_regression import verify; r=verify(); print(r); raise SystemExit(0 if r.get('ok') else 1)"
 
       - name: Public evidence verifier
-        id: evidence
         run: python -m rag_bench.verify_public_evidence
 
       - name: Security / path scan
-        id: scan
         run: python scripts/sanitize_public_tree.py --scan-only
 
-      - name: Working tree clean (tracked)
-        id: gitdiff
+      - name: Working tree clean (tracked content)
         shell: bash
         run: |
-          git status --porcelain
-          git diff --exit-code
-          echo "working_tree_clean=true" >> "$GITHUB_OUTPUT"
+          # Content-only: ignore pure CRLF/stat noise; fail on real tracked diffs
+          git add -A
+          # unstage ignored/untracked noise
+          git reset HEAD -- . >/dev/null 2>&1 || true
+          if ! git diff --exit-code HEAD; then
+            echo "Tracked content differs after recompute:"
+            git diff --stat HEAD
+            git diff HEAD | head -n 200
+            exit 1
+          fi
+          echo "working_tree_clean_after_recompute=true"
 
       - name: Build machine-readable evidence
         if: always()
@@ -112,7 +119,6 @@ jobs:
           primary = (hold.get("holdout_primary_metrics") or {})
           boot = (hold.get("bootstrap") or {})
 
-          # desensitized: no absolute paths, no caches
           evidence = {
               "schema": 1,
               "repository": "My-Denia/rag-production-hardening",

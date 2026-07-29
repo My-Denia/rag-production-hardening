@@ -12,13 +12,15 @@ from rag_bench.graph import run_pipeline
 from rag_bench.index import RAGIndex
 from rag_bench.metrics import attribution_hit, evaluate_run, recall_at_k
 
-# Keys omitted from tracked JSON so full recompute stays path/time-agnostic.
+# Keys omitted from tracked JSON so full recompute stays path/time-agnostic
+# and bit-stable across CPU/OS/Python float noise.
 _VOLATILE_METRIC_KEYS = frozenset(
     {
         "latencies_ms",
         "latency_p50_ms",
         "latency_p95_ms",
         "latency_ms",
+        "top1_scores",  # embedding float noise across platforms
     }
 )
 
