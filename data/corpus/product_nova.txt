@@ -1,0 +1,14 @@
+Aether Dynamics Product Brief — Project Nova
+Document ID: PRD-NOVA-03
+Status: Generally Available since 2024-02-20
+
+Project Nova is the company's real-time analytics dashboard for manufacturing line telemetry.
+Nova supports ingestion from MQTT brokers and OPC-UA endpoints at up to 50,000 events per second per cluster.
+Default data retention in Nova Standard tier is 30 days; Nova Enterprise extends retention to 365 days.
+Nova export formats include CSV, Parquet, and Prometheus remote-write.
+The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total.
+Customer success contacts for Nova are listed at nova-support@aetherdynamics.example.
+Nova does not process personal health information (PHI); healthcare customers must use the separate Helix product line.
+SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA.
+
+[Cross-ref note — not Nova SKU] Helix retains audit logs 7 years and targets healthcare PHI; do not conflate with Nova trial limits. Expense submission within 30 days and password rotation every 90 days are unrelated operational policies. Garage B free parking is facilities.

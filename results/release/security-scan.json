@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "high_confidence_secrets": 0,
+  "path_hits": 0,
+  "files_scanned": 123,
+  "commands": [
+    "git log -p --all",
+    "python scripts/sanitize_public_tree.py --scan-only",
+    "scan root=<REPO_ROOT>"
+  ],
+  "secret_hits": [],
+  "path_hit_details": [],
+  "pass": true
+}

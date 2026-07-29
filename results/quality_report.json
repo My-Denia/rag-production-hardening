@@ -1,0 +1,1107 @@
+{
+  "n": 84,
+  "by_arm": {
+    "hash_dense_k4_r0": {
+      "recall_at_k": 0.8181818181818182,
+      "recall_at_1": 0.6363636363636364,
+      "mrr": 0.7099567099567099,
+      "attribution_rate": 0.8181818181818182,
+      "unsupported_answer_rate": 0.25,
+      "error_citation_rate": 1.0,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 7.8711999994993676,
+      "latency_p95_ms": 10.732900002039969,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "hash_dense_k8_r1": {
+      "recall_at_k": 0.8441558441558441,
+      "recall_at_1": 0.7142857142857143,
+      "mrr": 0.7716450216450216,
+      "attribution_rate": 0.8311688311688312,
+      "unsupported_answer_rate": 0.2261904761904762,
+      "error_citation_rate": 0.961038961038961,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 7.121599999663886,
+      "latency_p95_ms": 11.690600000292761,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "minilm_dense_k8_r1": {
+      "recall_at_k": 0.948051948051948,
+      "recall_at_1": 0.7402597402597403,
+      "mrr": 0.8213203463203463,
+      "attribution_rate": 0.8961038961038961,
+      "unsupported_answer_rate": 0.14285714285714285,
+      "error_citation_rate": 0.974025974025974,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 18.59360000162269,
+      "latency_p95_ms": 19.935199998144526,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "bm25_k8_r0": {
+      "recall_at_k": 0.935064935064935,
+      "recall_at_1": 0.7272727272727273,
+      "mrr": 0.8038033395176253,
+      "attribution_rate": 0.8831168831168831,
+      "unsupported_answer_rate": 0.17857142857142858,
+      "error_citation_rate": 0.6493506493506493,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 7.685900000069523,
+      "latency_p95_ms": 10.616999999911059,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "hybrid_rrf_k8_r1": {
+      "recall_at_k": 0.948051948051948,
+      "recall_at_1": 0.7532467532467533,
+      "mrr": 0.8202380952380952,
+      "attribution_rate": 0.8831168831168831,
+      "unsupported_answer_rate": 0.16666666666666666,
+      "error_citation_rate": 0.987012987012987,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 18.97319999989122,
+      "latency_p95_ms": 20.32350000081351,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "hybrid_rrf_k8_r0": {
+      "recall_at_k": 0.948051948051948,
+      "recall_at_1": 0.7012987012987013,
+      "mrr": 0.7997835497835498,
+      "attribution_rate": 0.8961038961038961,
+      "unsupported_answer_rate": 0.15476190476190477,
+      "error_citation_rate": 0.987012987012987,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 19.004199999471894,
+      "latency_p95_ms": 20.381099999212893,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "recursive_minilm_k8_r1": {
+      "recall_at_k": 0.987012987012987,
+      "recall_at_1": 0.8701298701298701,
+      "mrr": 0.913961038961039,
+      "attribution_rate": 0.935064935064935,
+      "unsupported_answer_rate": 0.10714285714285714,
+      "error_citation_rate": 0.974025974025974,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 17.82190000085393,
+      "latency_p95_ms": 18.987100000231294,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "minilm_dense_k8_r1_margin": {
+      "recall_at_k": 0.948051948051948,
+      "recall_at_1": 0.7402597402597403,
+      "mrr": 0.8213203463203463,
+      "attribution_rate": 0.7142857142857143,
+      "unsupported_answer_rate": 0.0875,
+      "error_citation_rate": 0.7532467532467533,
+      "refusal_f1": 0.2857142857142857,
+      "latency_p50_ms": 18.394799997622613,
+      "latency_p95_ms": 19.67309999963618,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "minilm_mq_k8_r1": {
+      "recall_at_k": 0.948051948051948,
+      "recall_at_1": 0.7402597402597403,
+      "mrr": 0.8150587507730365,
+      "attribution_rate": 0.8961038961038961,
+      "unsupported_answer_rate": 0.14285714285714285,
+      "error_citation_rate": 0.987012987012987,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 25.933799999620533,
+      "latency_p95_ms": 34.294799999770476,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    },
+    "retrieval_off_control": {
+      "recall_at_k": 0.0,
+      "recall_at_1": 0.0,
+      "mrr": 0.0,
+      "attribution_rate": 0.0,
+      "unsupported_answer_rate": 1.0,
+      "error_citation_rate": 0.0,
+      "refusal_f1": 0.0,
+      "latency_p50_ms": 5.952300001808908,
+      "latency_p95_ms": 7.712599999649683,
+      "n": 84,
+      "n_answerable": 77,
+      "n_unanswerable": 7
+    }
+  },
+  "by_category": {
+    "multi_evidence": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "cross_chunk": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 6,
+          "answerable": 8,
+          "recall_at_k": 0.75
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "unanswerable": {
+      "n": 7,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "hash_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "minilm_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "bm25_k8_r0": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        },
+        "retrieval_off_control": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 0,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "contradiction": {
+      "n": 7,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 7,
+          "recall_hits": 5,
+          "answerable": 7,
+          "recall_at_k": 0.7142857142857143
+        },
+        "hash_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 4,
+          "answerable": 7,
+          "recall_at_k": 0.5714285714285714
+        },
+        "minilm_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "bm25_k8_r0": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "minilm_mq_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "retrieval_off_control": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 7,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "paraphrase": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 4,
+          "answerable": 8,
+          "recall_at_k": 0.5
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "noise": {
+      "n": 7,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 7,
+          "recall_hits": 5,
+          "answerable": 7,
+          "recall_at_k": 0.7142857142857143
+        },
+        "hash_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 5,
+          "answerable": 7,
+          "recall_at_k": 0.7142857142857143
+        },
+        "minilm_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "bm25_k8_r0": {
+          "n": 7,
+          "recall_hits": 5,
+          "answerable": 7,
+          "recall_at_k": 0.7142857142857143
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "minilm_mq_k8_r1": {
+          "n": 7,
+          "recall_hits": 6,
+          "answerable": 7,
+          "recall_at_k": 0.8571428571428571
+        },
+        "retrieval_off_control": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 7,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "hard_negative": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "low_overlap_semantic": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 6,
+          "answerable": 8,
+          "recall_at_k": 0.75
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 6,
+          "answerable": 8,
+          "recall_at_k": 0.75
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "near_dup": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 6,
+          "answerable": 8,
+          "recall_at_k": 0.75
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "injection": {
+      "n": 7,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "hash_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 7,
+          "recall_hits": 7,
+          "answerable": 7,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 7,
+          "recall_hits": 0,
+          "answerable": 7,
+          "recall_at_k": 0.0
+        }
+      }
+    },
+    "lexical": {
+      "n": 8,
+      "arms": {
+        "hash_dense_k4_r0": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "hash_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 7,
+          "answerable": 8,
+          "recall_at_k": 0.875
+        },
+        "minilm_dense_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "bm25_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "hybrid_rrf_k8_r0": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "recursive_minilm_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_dense_k8_r1_margin": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "minilm_mq_k8_r1": {
+          "n": 8,
+          "recall_hits": 8,
+          "answerable": 8,
+          "recall_at_k": 1.0
+        },
+        "retrieval_off_control": {
+          "n": 8,
+          "recall_hits": 0,
+          "answerable": 8,
+          "recall_at_k": 0.0
+        }
+      }
+    }
+  },
+  "latency_p50_ms": 14.735250000012456,
+  "latency_p95_ms": 34.294799999770476,
+  "peak_rss_mb": null,
+  "index_bytes": 0,
+  "selection": {
+    "winner_id": "recursive_minilm_k8_r1",
+    "rule_hash": "ab76cb29861f9310746ecb261a02c258499a249ef04693daca94d16b2c57b04b",
+    "holdout_passed": true,
+    "baseline_arm_id": "hash_dense_k8_r1",
+    "deltas": {
+      "delta_recall": 0.15151515151515152,
+      "ci_low": 0.030303030303030304,
+      "ci_high": 0.30303030303030304
+    }
+  },
+  "regression": {
+    "n": 35,
+    "n_answerable": 35,
+    "n_unanswerable": 0,
+    "recall_at_k": 1.0,
+    "recall_at_1": 0.9428571428571428,
+    "mrr": 0.9714285714285714,
+    "attribution_rate": 1.0,
+    "attribution_precision": 0.37857142857142856,
+    "attribution_recall": 1.0,
+    "attribution_exactness": 1.0,
+    "completeness": 1.0,
+    "unsupported_answer_rate": 0.0,
+    "error_citation_rate": 0.9714285714285714,
+    "refusal_precision": 0.0,
+    "refusal_recall": 0.0,
+    "refusal_f1": 0.0,
+    "recall_hits": 35,
+    "attribution_hits": 35,
+    "hit_vector": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "attr_vector": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "config": {
+      "chunk_strategy": "recursive_400_80",
+      "top_k": 8,
+      "rerank": true,
+      "retrieval": true,
+      "threshold": null,
+      "embeddings": "minilm",
+      "retriever": "dense",
+      "query_strategy": "raw",
+      "abstain": "none",
+      "rrf_k": 60,
+      "arm_id": "recursive_minilm_k8_r1"
+    },
+    "qids": [
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05",
+      "q06",
+      "q07",
+      "q08",
+      "q09",
+      "q10",
+      "q11",
+      "q12",
+      "q13",
+      "q14",
+      "q15",
+      "q16",
+      "q17",
+      "q18",
+      "q19",
+      "q20",
+      "q21",
+      "q22",
+      "q23",
+      "q24",
+      "q25",
+      "q26",
+      "q27",
+      "q28",
+      "q29",
+      "q30",
+      "q31",
+      "q32",
+      "q33",
+      "q34",
+      "q35"
+    ],
+    "top1_scores": [
+      0.7498483082525631,
+      0.7515483559377005,
+      0.7114732251004808,
+      0.5130352816333781,
+      0.6865138417853167,
+      0.4578761252871396,
+      0.635099558709904,
+      0.60122898595486,
+      0.6957021084108521,
+      0.6715912485351287,
+      0.7814622924733337,
+      0.6255864414307918,
+      0.5007569570746975,
+      0.5854209777435934,
+      0.6900881165551923,
+      0.5975323738808225,
+      0.7156471834537508,
+      0.5767135745251655,
+      0.7610104509382756,
+      0.6604582491559261,
+      0.6835075092284766,
+      0.6708002833548979,
+      0.5543104560520246,
+      0.6069403810147126,
+      0.7396866527026261,
+      0.5553038416327001,
+      0.49726793831144017,
+      0.6803807292997097,
+      0.7196168370142082,
+      0.6769568878100409,
+      0.6440133722111441,
+      0.7720768934455934,
+      0.7522496319650893,
+      0.6769824103952924,
+      0.5348177206647746
+    ],
+    "latency_p50_ms": 17.86029999857419,
+    "latency_p95_ms": 20.376099997520214,
+    "latencies_ms": [
+      20.0674000006984,
+      18.3686000018497,
+      18.307000002096174,
+      19.523900002241135,
+      17.697699997370364,
+      18.43130000270321,
+      17.627599998377264,
+      17.89709999866318,
+      20.376099997520214,
+      17.86029999857419,
+      18.503600000258302,
+      18.672300000616815,
+      17.938899996806867,
+      17.95690000290051,
+      18.537000003561843,
+      18.665899999177782,
+      13.88520000182325,
+      11.679899998853216,
+      12.89829999950598,
+      12.678699997195508,
+      12.338199998339405,
+      14.037200002348982,
+      16.282100001262734,
+      14.036700002179714,
+      18.26650000293739,
+      18.314599998120684,
+      17.33080000121845,
+      20.890400002826937,
+      17.76109999991604,
+      18.65879999968456,
+      16.81749999988824,
+      13.748399996984517,
+      16.64129999699071,
+      17.839899999671616,
+      17.11970000178553
+    ],
+    "by_category": {
+      "lexical": {
+        "n": 35,
+        "recall_hits": 35,
+        "answerable": 35,
+        "recall_at_k": 1.0
+      }
+    },
+    "arm_id": "recursive_minilm_k8_r1"
+  },
+  "holdout_confirmation_pass": true
+}

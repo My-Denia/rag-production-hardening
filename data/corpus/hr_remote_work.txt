@@ -1,0 +1,13 @@
+Aether Dynamics HR — Remote and Hybrid Work Policy
+Document ID: HR-REMOTE-006
+Effective: 2023-09-01
+
+Full-time employees may work hybrid (minimum 3 office days per week) or fully remote if their role is designated remote-eligible in the job catalog.
+Remote-eligible roles include Software Engineer, Data Analyst, Technical Writer, and Customer Success Manager. Laboratory technicians are office-only.
+Employees working remote more than 50% of days in a quarter must complete quarterly equipment and ergonomics self-certification.
+Core collaboration hours are 10:00–15:00 in the employee's local time zone for scheduled meetings.
+Company-issued laptops remain mandatory for all remote work; personal computers may not access production systems.
+Home internet stipend is 50 USD per month for fully remote employees, paid via payroll.
+International remote work outside the country of employment for more than 14 consecutive days requires Legal and Tax pre-approval.
+
+[Cross-ref note — not remote-work policy] Pager rotation starting Monday 09:00 UTC, Severity-1 updates every 30 minutes, and PIR within 5 business days are engineering on-call rules. Maternity 16 weeks / paternity 2 weeks remain leave-policy items. Loyalty credit of 5% on 3-year deals is commercial, not remote work.

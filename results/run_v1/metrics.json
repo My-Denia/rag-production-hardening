@@ -1,0 +1,16 @@
+{
+  "n": 35,
+  "recall_at_k": 0.9714285714285714,
+  "attribution_rate": 0.9714285714285714,
+  "recall_hits": 34,
+  "attribution_hits": 34,
+  "config": {
+    "chunk_strategy": "fixed_256",
+    "top_k": 2,
+    "rerank": true,
+    "retrieval": true,
+    "threshold": null,
+    "embeddings": "hash",
+    "retriever": "dense"
+  }
+}

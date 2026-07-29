@@ -1,0 +1,11 @@
+chunk_strategy: fixed_256
+top_k: 2
+rerank: true
+retrieval: true
+threshold: null
+embeddings: hash
+retriever: dense
+source: ablation_table.csv
+winning_cell_id: 0
+winning_recall_at_k: 0.9714285714285714
+winning_attribution_rate: 0.9714285714285714

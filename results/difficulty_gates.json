@@ -1,0 +1,12 @@
+{
+  "jaccard_v1": 0.3663448467501022,
+  "jaccard_v2": 0.1236286354569305,
+  "jaccard_drop": 0.24271621129317172,
+  "jaccard_strictly_lower": true,
+  "hash_recall_v1": 0.9714285714285714,
+  "hash_recall_v2": 0.5714285714285714,
+  "hash_recall_drop": 0.4,
+  "hash_recall_drop_gate": true,
+  "min_recall_drop_required": 0.15,
+  "passed": true
+}

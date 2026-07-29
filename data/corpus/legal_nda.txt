@@ -1,0 +1,13 @@
+Aether Dynamics Legal — Mutual NDA Summary
+Document ID: LEG-NDA-022
+For external partners and vendors
+
+Confidential Information includes non-public technical, business, and financial information disclosed in writing or marked confidential, or that a reasonable person would understand to be confidential.
+Obligations last for 3 years from the date of disclosure, except for trade secrets which remain protected while they qualify as trade secrets under applicable law.
+Receiving parties may share Confidential Information with employees and contractors who have a need to know and are bound by written confidentiality terms at least as protective.
+Required disclosures to courts or regulators are permitted if the disclosing party is given prompt written notice when legally allowed.
+Return or destruction of Confidential Information is required within 30 days of written request, except for backup copies retained under automated systems and still subject to confidentiality.
+The NDA is governed by the laws of the State of Delaware.
+Publicly available information and independently developed information are excluded from Confidential Information.
+
+[Cross-ref note — not NDA] South plaza evacuation assembly, cafeteria breakfast 07:30, and home internet stipend $50 are not contractual NDA terms. Severity-1 channel updates every 30 minutes are operational. Travel pre-approval above $500 is finance.

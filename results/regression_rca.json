@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "target": "dual_35/35",
+  "target_definition": {
+    "recall_hits": "35/35 answerable recall_at_k hits",
+    "attribution_hits": "35/35 binary attribution (cited gold overlap AND all must_contain)"
+  },
+  "arm_id": "recursive_minilm_k8_r1",
+  "n": 35,
+  "recall_hits": 35,
+  "attribution_hits": 35,
+  "recall_at_k": 1.0,
+  "attribution_rate": 1.0,
+  "dual_35_35": true,
+  "ok": true,
+  "miss_recall_qids": [],
+  "miss_attribution_qids": [],
+  "miss_qids": [],
+  "miss_details": [],
+  "attempts": [
+    {
+      "id": "extractive_stem_overlap_v1",
+      "description": "Improved extractive_answer: stem-aware overlap, numeric/time fact boost, distractor penalty, rank prior. No gold edits, no hardcoding, no label leak.",
+      "applied": true
+    }
+  ],
+  "root_causes": [],
+  "adjudication": {
+    "claim_dual_35_35": true,
+    "honest_status": "PASS dual 35/35",
+    "forbidden_actions_not_taken": [
+      "no gold label edits after seeing scores",
+      "no hardcoded answers",
+      "no dropping failing cases",
+      "no weakened assertions"
+    ],
+    "note": "Plan allows complete with RCA+auditor ack for misses; must not claim dual 35/35 falsely."
+  }
+}

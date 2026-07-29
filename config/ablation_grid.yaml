@@ -1,0 +1,30 @@
+# Ablation grid definition — all cells measured by run_all / ablate
+# Selected winners written to config/selected.yaml after readings.
+
+retrieval:
+  - true
+  - false
+
+rerank:
+  - true
+  - false
+
+chunk_strategy:
+  - fixed_256
+  - fixed_512
+  - recursive_400_80
+
+top_k:
+  - 2
+  - 4
+  - 8
+
+# Score cutoff after retrieve (normalized overlap score); null = no cutoff
+threshold:
+  - null
+  - 0.1
+  - 0.3
+
+# Fixed for fair comparison across cells unless ablated
+embeddings: hash
+retriever: dense  # dense | bm25 | hybrid

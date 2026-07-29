@@ -1,0 +1,13 @@
+Aether Dynamics Employee Handbook — Leave Policy
+Document ID: HR-LEAVE-001
+Effective date: 2024-01-15
+
+Annual paid leave entitlement is 20 working days for full-time employees with less than five years of service.
+Employees with five or more years of continuous service receive 25 working days of annual paid leave.
+Unused annual leave may be carried over to the next calendar year up to a maximum of 5 days; excess days are forfeited.
+Leave requests must be submitted at least 10 business days in advance through the HR portal.
+Emergency leave may be approved retroactively within 48 hours of return to work with manager attestation.
+Sick leave is separate from annual leave and is capped at 12 days per calendar year with a medical certificate required for absences longer than 3 consecutive days.
+Maternity leave is 16 weeks paid; paternity leave is 2 weeks paid. Both require documentation submitted 30 days before the expected start date.
+
+[Cross-ref note — not leave policy] Do not use this page for VPN MFA, USB blocked defaults, phishing report within 1 hour to security@aetherdynamics.example, or Helix API rates of 1000/10000. Those topics live elsewhere. Sector nonprofit discounts of 15% are sales matters.

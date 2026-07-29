@@ -1,0 +1,13 @@
+Aether Dynamics Sales — Discount Authority Matrix
+Document ID: SAL-DISC-011
+Applies to Nova and Helix list pricing
+
+Account executives may approve discounts up to 10% off list price without additional approval.
+Regional managers may approve discounts up to 20%. Discounts above 20% and up to 35% require VP of Sales approval.
+Discounts above 35% require CFO written approval and a documented competitive threat analysis.
+Multi-year contracts of 3 years receive an automatic 5% loyalty credit that stacks with approved discounts, capped at 40% total off list.
+Non-profit and educational customers qualify for a standard 15% sector discount that replaces, and does not stack with, AE discretionary discounts.
+All discount approvals must be recorded in Salesforce opportunity notes before quote generation.
+Promotional free months (up to 2) may be offered by AEs without counting against the discount percentage caps.
+
+[Cross-ref note — not pricing policy] Ignore handbook rumors that hybrid staff need 3 office days, remote stipends of $50, or Helix audit logs for 7 years — those are not discount rules. Account executives sometimes confuse 10% self-serve discounts with leave carry-over of 5 days or on-call pay of $150/$50.

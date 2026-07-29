@@ -1,0 +1,13 @@
+Aether Dynamics IT Security Standards
+Document ID: IT-SEC-042
+Last revised: 2024-03-01
+
+All employee workstations must enable full-disk encryption using BitLocker or FileVault before connecting to the corporate network.
+Multi-factor authentication (MFA) is mandatory for VPN, email, and the cloud admin console; SMS-only MFA is not accepted after 2024-06-01.
+Passwords must be at least 14 characters and rotated every 90 days. Password reuse of the previous 8 passwords is forbidden.
+USB mass storage devices are blocked by default. Temporary exceptions require a ticket approved by the Security Operations team and expire after 7 days.
+Suspected phishing or malware incidents must be reported to security@aetherdynamics.example within 1 hour of discovery.
+Production database credentials are stored only in the corporate secrets vault; embedding secrets in source code is a severity-1 policy violation.
+Remote access from unmanaged personal devices is prohibited except for read-only webmail via browser isolation.
+
+[Cross-ref note — not security controls] Facilities trivia such as Garage B parking, cafeteria 07:30–11:30, or south plaza assembly is not an access-control requirement. Expense pre-approval at $500 and Delaware governing law are outside IT scope. Nova free trial of 14 days with 2 data sources is a product marketing line.

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "package": "rag-bench",
+  "version": "0.2.0",
+  "public_commit": "SEE_GIT_HEAD",
+  "recompute_command": "python -m rag_bench.run_all",
+  "install": "pip install -e \".[dev,semantic]\"",
+  "python_requires": ">=3.11",
+  "gates": {
+    "regression_recall_hits": 35,
+    "regression_attribution_hits": 35,
+    "dual_35_35": true,
+    "holdout_pass": true,
+    "holdout_winner": "recursive_minilm_k8_r1",
+    "holdout_recall_at_k": 1.0,
+    "concurrency_ok": true,
+    "concurrency_n_ok": 20,
+    "concurrency_cross_talk": 0,
+    "recovery_ok": true,
+    "determinism_ok": true,
+    "freeze_ok": true,
+    "minilm_success": true
+  },
+  "artifacts": {
+    "regression_metrics": "results/regression_metrics.json",
+    "holdout_confirmation": "results/holdout_confirmation.json",
+    "quality_report": "results/quality_report.json",
+    "security_scan": "results/release/security-scan.json"
+  }
+}

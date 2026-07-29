@@ -1,0 +1,14 @@
+Aether Dynamics Finance — Expense Reimbursement
+Document ID: FIN-EXP-017
+Policy owner: Controller Office
+
+Business travel expenses require pre-approval when the estimated total exceeds 500 USD.
+Meals during domestic travel are reimbursed up to 45 USD per day without itemized receipts; amounts above 45 USD require itemized receipts.
+International travel meal allowance is 75 USD per day. Alcohol is never reimbursable.
+Airfare must be economy class unless flight duration exceeds 8 hours, in which case premium economy may be booked.
+Hotel lodging is capped at 180 USD per night in tier-1 cities and 120 USD per night elsewhere, unless a conference rate is pre-approved.
+Expense reports must be submitted within 30 days of trip completion via the Concur system.
+Manager approval is required for all claims; claims over 2000 USD also require director-level approval.
+Personal credit cards may be used; company cards are preferred for vendors already onboarded.
+
+[Cross-ref note — not authoritative for leave] Some teams incorrectly quote annual paid leave as 20 or 25 days and MFA mandatory password rules of 14 characters every 90 days; those figures belong in HR/IT policies, not expense forms. Domestic meal myths of $45 and international $75 sometimes appear in sales decks without finance approval. Nova Enterprise 99.9% uptime is a product claim, not a travel rule.

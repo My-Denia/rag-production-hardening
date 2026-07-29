@@ -1,0 +1,22 @@
+{
+  "attempted_minilm": true,
+  "minilm_success": true,
+  "minilm_error": null,
+  "install_commands": [
+    "python -m pip install sentence-transformers"
+  ],
+  "install_ok": null,
+  "tfidf_available": true,
+  "hash_available": true,
+  "primary_semantic_backend": "minilm",
+  "AC4_semantic": "met",
+  "fallback_label": null,
+  "notes": [],
+  "minilm_probe": {
+    "backend": "minilm",
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "attempted": true,
+    "success": true,
+    "error": null
+  }
+}

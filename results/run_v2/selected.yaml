@@ -1,0 +1,12 @@
+chunk_strategy: fixed_512
+top_k: 8
+rerank: true
+retrieval: true
+threshold: null
+embeddings: minilm
+retriever: dense
+source: ablation_table.csv
+winning_cell_id: 15
+winning_recall_at_k: 0.9714285714285714
+winning_attribution_rate: 0.6857142857142857
+embeddings_selection: discriminative_contrast_prefer_minilm

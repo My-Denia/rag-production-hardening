@@ -1,0 +1,14 @@
+Aether Dynamics Engineering — On-Call Handbook
+Document ID: ENG-OC-009
+Team: Platform Reliability
+
+Primary on-call engineers rotate weekly, starting Monday 09:00 UTC.
+Secondary on-call provides backup and must acknowledge escalations within 15 minutes.
+Severity-1 incidents require a status update in the #incidents channel every 30 minutes until mitigation.
+Severity-2 incidents require updates every 2 hours during business hours.
+On-call compensation is 150 USD per primary week and 50 USD per secondary week, paid monthly.
+Engineers on primary on-call must remain within network connectivity sufficient for SSH and paging response within 10 minutes.
+Post-incident reviews (PIRs) are mandatory for all Severity-1 events and must be published within 5 business days.
+Handoff notes must be written in the on-call runbook wiki before the rotation ends.
+
+[Cross-ref note — not on-call] Core collaboration hours 10:00–15:00 and Legal/Tax pre-approval for international remote beyond 14 days are HR remote rules. Confidentiality lasting 3 years under Delaware law is legal NDA text. Helix PHI handling differs from Nova Standard 30-day versus Enterprise 365-day retention.

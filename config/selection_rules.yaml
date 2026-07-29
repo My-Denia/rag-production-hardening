@@ -1,0 +1,54 @@
+baseline_arm_id: hash_dense_k8_r1
+bootstrap_B: 1000
+bootstrap_seed: 42
+bootstrap:
+  unit: holdout_qid
+  statistic: delta_recall_at_k
+  ci_level: 0.95
+  ci_method: percentile
+  paired: true
+significance:
+  min_delta_recall: 0.05
+  ci_must_exclude_zero: true
+  max_attribution_drop: 0.02
+  max_unsupported_rise: 0.02
+  max_refusal_recall_drop: 0.05
+lexicographic:
+  - maximize: attribution_rate
+  - maximize: recall_at_k
+  - maximize: refusal_f1
+  - minimize: error_citation_rate
+  - minimize: p95_e2e_ms
+retrieval_off:
+  arm_id: retrieval_off_control
+  require_answerable_recall_eq: 0.0
+  require_attribution_eq: 0.0
+k_for_recall:
+  policy: arm_top_k
+determinism:
+  pipeline: deterministic
+  seeds: [0]
+  if_nondeterminism_detected: "run seeds [0,1,2] report mean±std then NEEDS_REPLAN if not documented"
+split:
+  new_labels_seed: 7
+  method: stratified_by_category
+  dev_fraction: 0.70
+  holdout_fraction: 0.30
+  holdout_min_unanswerable: 5
+  holdout_min_per_category: 2
+metrics_definitions:
+  recall_at_k: "any retrieved chunk span overlaps any gold_span (answerable only); mean binary"
+  recall_at_1: "same with top-1 only"
+  mrr: "1/rank of first gold-overlapping chunk, 0 if none"
+  attribution_rate: "binary (cited_gold_overlap AND all must_contain) mean on answerable"
+  attribution_precision: "cited_gold_overlap_count / max(cited_count,1) mean"
+  attribution_recall: "1 if any cited overlaps gold else 0 (answerable)"
+  attribution_exactness: "all must_contain in answer AND attribution_recall==1"
+  completeness: "fraction of must_contain tokens present in answer"
+  unsupported_answer_rate: "answer non-empty AND answerable AND no gold-overlap cite; OR answer non-empty AND not answerable AND not refused"
+  error_citation_rate: "any cited chunk with no gold overlap while answerable"
+  refusal_precision: "count(refused & unanswerable) / max(count(refused),1)"
+  refusal_recall: "count(refused & unanswerable) / max(count(unanswerable),1)"
+  refusal_f1: "2pr/(p+r) if p+r>0 else 0"
+  refused: "answer.strip()==ABSTAIN_MARK OR stage contains abstain"
+ABSTAIN_MARK: "[ABSTAIN]"

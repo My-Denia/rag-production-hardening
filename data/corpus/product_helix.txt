@@ -1,0 +1,13 @@
+Aether Dynamics Product Brief — Helix Health Data Platform
+Document ID: PRD-HELIX-01
+Status: Limited Availability
+
+Helix is designed for HIPAA-eligible workloads and processes protected health information (PHI) under BAA agreements only.
+Helix encryption uses AES-256 at rest and TLS 1.3 in transit. Customer-managed keys (CMK) are available on Enterprise plans.
+Helix audit logs are retained for 7 years to support compliance reviews.
+Data residency options for Helix are US-East, US-West, and EU-Central; data does not leave the selected region.
+Helix API rate limit is 1000 requests per minute per tenant on Standard and 10000 on Enterprise.
+Helix does not include real-time manufacturing telemetry; that capability belongs to Project Nova.
+Onboarding requires a signed BAA and completion of the security questionnaire within 10 business days.
+
+[Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. On-call primary compensation of $150/week is engineering. Multi-factor authentication for VPN is IT security.

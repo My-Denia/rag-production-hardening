@@ -1,0 +1,14 @@
+categories:
+  - lexical
+  - paraphrase
+  - low_overlap_semantic
+  - hard_negative
+  - unanswerable
+  - cross_chunk
+  - multi_evidence
+  - near_dup
+  - noise
+  - contradiction
+  - injection
+min_per_category: 8
+min_total_new: 100

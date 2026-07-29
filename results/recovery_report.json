@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "stages": {
+    "retrieve": {
+      "stage": "retrieve",
+      "hash_match": true,
+      "answer_match_control": true,
+      "pre_kill_hash": "2478fe8e4fdd0d30dcd54fb10ba3a826df7ec1f3eeebae3666df7cd8a55b222c",
+      "post_restart_hash": "2478fe8e4fdd0d30dcd54fb10ba3a826df7ec1f3eeebae3666df7cd8a55b222c",
+      "worker_dead": true,
+      "freeze_ok": true,
+      "final_stage": "finalize",
+      "final_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "control_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "ok": true,
+      "work_dir": "<REDACTED_TEMP_DIR>",
+      "kill_method": "taskkill",
+      "worker_exit_code": 1
+    },
+    "rerank": {
+      "stage": "rerank",
+      "hash_match": true,
+      "answer_match_control": true,
+      "pre_kill_hash": "2613e05a805e22b9d51d29ccc62570dd07e4e80b85ca7438a1567bc82f52e990",
+      "post_restart_hash": "2613e05a805e22b9d51d29ccc62570dd07e4e80b85ca7438a1567bc82f52e990",
+      "worker_dead": true,
+      "freeze_ok": true,
+      "final_stage": "finalize",
+      "final_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "control_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "ok": true,
+      "work_dir": "<REDACTED_TEMP_DIR>",
+      "kill_method": "taskkill",
+      "worker_exit_code": 1
+    },
+    "generate": {
+      "stage": "generate",
+      "hash_match": true,
+      "answer_match_control": true,
+      "pre_kill_hash": "dd1af8781d3c307b8dd4b085acfe9a32c378b6c8f372bb6d0334ae472a2ebcb8",
+      "post_restart_hash": "dd1af8781d3c307b8dd4b085acfe9a32c378b6c8f372bb6d0334ae472a2ebcb8",
+      "worker_dead": true,
+      "freeze_ok": true,
+      "final_stage": "finalize",
+      "final_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "control_answer": "SLA for Nova Enterprise is 99.9% monthly uptime; Standard tier has no formal SLA. [cite:product_nova::span:679:880] [Cross-ref note — not Helix SKU] Nova Enterprise monthly uptime 99.9% and Standard retention of 30 days versus 365 for Enterprise are Nova numbers. [cite:product_helix::span:848:1105] The free trial of Nova lasts 14 days and is limited to 2 data sources and 1 million events total. [cite:product_nova::span:424:678] On-call primary compensation of $150/week is engineering. [cite:product_helix::span:848:1105]",
+      "ok": true,
+      "work_dir": "<REDACTED_TEMP_DIR>",
+      "kill_method": "taskkill",
+      "worker_exit_code": 1
+    }
+  },
+  "corrupt_checkpoint": {
+    "ok": true,
+    "corrupt_raises": true,
+    "corrupt_error_type": "DatabaseError",
+    "missing_raises": true,
+    "CheckpointError_defined": true
+  },
+  "ok": true
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "rag-bench: evaluable RAG production-hardening bench"
+version: "0.2.0"
+date-released: "2026-07-29"
+license: MIT
+repository-code: "https://github.com/My-Denia/rag-production-hardening"
+authors:
+  - name: "rag-bench contributors"
+abstract: >
+  Offline-first retrieval-augmented QA evaluation harness with frozen arms,
+  holdout-confirmed selection, external-judge metrics, LangGraph checkpoint
+  recovery, and concurrency isolation on a synthetic corpus.
+keywords:
+  - retrieval-augmented generation
+  - evaluation
+  - langgraph
+  - information-retrieval

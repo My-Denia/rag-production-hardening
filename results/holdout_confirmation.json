@@ -1,0 +1,45 @@
+{
+  "winner_id": "recursive_minilm_k8_r1",
+  "baseline_arm_id": "hash_dense_k8_r1",
+  "bootstrap": {
+    "point_delta": 0.15151515151515152,
+    "ci_low": 0.030303030303030304,
+    "ci_high": 0.30303030303030304,
+    "excludes_zero": true,
+    "ci_excludes_zero_positive": true,
+    "B": 1000,
+    "n": 33,
+    "seed": 42
+  },
+  "significance": {
+    "delta_recall_ok": true,
+    "attr_ok": true,
+    "unsup_ok": true,
+    "refusal_ok": true,
+    "retrieval_off_ok": true
+  },
+  "pass": true,
+  "holdout_primary_metrics": {
+    "recall_at_k": 1.0,
+    "attribution_rate": 0.9393939393939394,
+    "unsupported_answer_rate": 0.15789473684210525,
+    "refusal_f1": 0.0,
+    "refusal_recall": 0.0,
+    "n": 38,
+    "n_answerable": 33,
+    "n_unanswerable": 5
+  },
+  "holdout_baseline_metrics": {
+    "recall_at_k": 0.8484848484848485,
+    "attribution_rate": 0.7878787878787878,
+    "unsupported_answer_rate": 0.3157894736842105,
+    "refusal_f1": 0.0,
+    "refusal_recall": 0.0,
+    "n": 38,
+    "n_answerable": 33,
+    "n_unanswerable": 5
+  },
+  "selection_rules_sha256": "ab76cb29861f9310746ecb261a02c258499a249ef04693daca94d16b2c57b04b",
+  "shortlist_size": 1,
+  "re_ranked_on_holdout": false
+}

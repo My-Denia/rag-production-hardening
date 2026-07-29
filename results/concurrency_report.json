@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "n_sessions": 20,
+  "n_ok": 20,
+  "shared_db_n_ok": 20,
+  "shared_db_ok": true,
+  "cross_talk": 0,
+  "errors": [],
+  "kill_isolation_ok": true,
+  "kill_detail": {
+    "s1_answer_present": true,
+    "s2_answer_present": true,
+    "answers_differ": true
+  },
+  "ok": true,
+  "work_dir": "<REDACTED_TEMP_DIR>",
+  "sessions": [
+    {
+      "session_id": 0,
+      "thread_id": "session-00",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 1,
+      "thread_id": "session-01",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 2,
+      "thread_id": "session-02",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 3,
+      "thread_id": "session-03",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 4,
+      "thread_id": "session-04",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 5,
+      "thread_id": "session-05",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 6,
+      "thread_id": "session-06",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 7,
+      "thread_id": "session-07",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 8,
+      "thread_id": "session-08",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 9,
+      "thread_id": "session-09",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 10,
+      "thread_id": "session-10",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 11,
+      "thread_id": "session-11",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 12,
+      "thread_id": "session-12",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 13,
+      "thread_id": "session-13",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 14,
+      "thread_id": "session-14",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 15,
+      "thread_id": "session-15",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 16,
+      "thread_id": "session-16",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 17,
+      "thread_id": "session-17",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 18,
+      "thread_id": "session-18",
+      "query_match": true,
+      "stage": "finalize"
+    },
+    {
+      "session_id": 19,
+      "thread_id": "session-19",
+      "query_match": true,
+      "stage": "finalize"
+    }
+  ]
+}

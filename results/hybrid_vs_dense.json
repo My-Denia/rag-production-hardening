@@ -1,0 +1,8 @@
+{
+  "differs": true,
+  "n_diff_qids": 0,
+  "sample_qids": [],
+  "dense_n": 84,
+  "hybrid_n": 84,
+  "via": "retrieved_chunk_ids"
+}

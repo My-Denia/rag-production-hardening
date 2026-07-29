@@ -1,0 +1,5864 @@
+{
+  "run_v1": {
+    "label": "run_v1_archive",
+    "n_cells": 108,
+    "cells": [
+      {
+        "cell_id": 0,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 1,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 2,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 3,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 4,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 5,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 6,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 7,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 8,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 9,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 10,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 11,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 12,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 13,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 14,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 15,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 16,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 17,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 18,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 19,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 20,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 21,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 22,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 23,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 24,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 25,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 26,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 27,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 28,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 29,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 30,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 31,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 32,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 33,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 34,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 35,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 36,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 37,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 38,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 39,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 40,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 41,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 42,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 43,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 44,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 45,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 46,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 47,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9142857142857143,
+          "se": 0.047318781212047155,
+          "wilson_95": [
+            0.7762040092883747,
+            0.970418168994703
+          ],
+          "hits": 32
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 48,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 49,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 50,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9428571428571428,
+          "se": 0.03923466070431973,
+          "wilson_95": [
+            0.8139261926062996,
+            0.984187170385956
+          ],
+          "hits": 33
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 51,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 52,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 53,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.9714285714285714,
+          "se": 0.02816030744597607,
+          "wilson_95": [
+            0.8546659090672868,
+            0.9949386386341466
+          ],
+          "hits": 34
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 54,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 55,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 56,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 57,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 58,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 59,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 60,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 61,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 62,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 63,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 64,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 65,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 66,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 67,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 68,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 69,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 70,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 71,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 72,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 73,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 74,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 75,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 76,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 77,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 78,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 79,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 80,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 81,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 82,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 83,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 84,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 85,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 86,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 87,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 88,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 89,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 90,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 91,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 92,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 93,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 94,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 95,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 96,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 97,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 98,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 99,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 100,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 101,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 102,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 103,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 104,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 105,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": null,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 106,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      },
+      {
+        "cell_id": 107,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": false
+      }
+    ],
+    "factors": {
+      "retrieval": {
+        "levels": {
+          "true": {
+            "n_cells": 54,
+            "mean_recall": 0.9555555555555556,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "false": {
+            "n_cells": 54,
+            "mean_recall": 0.0,
+            "best_cell_id": 54,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.0,
+              "se": 0.0,
+              "wilson_95": [
+                0.0,
+                0.0989042675893887
+              ],
+              "hits": 0
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "false",
+            "level_b": "true",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": -0.9555555555555556,
+            "se_paired": 0.034833947236432246,
+            "ci_95": [
+              -1.0238300921389627,
+              -0.8872810189721484
+            ],
+            "discriminative": true,
+            "note": "unpaired_cell_means_fallback"
+          }
+        ],
+        "discriminative": true,
+        "claim_label": "discriminative"
+      },
+      "rerank": {
+        "levels": {
+          "true": {
+            "n_cells": 27,
+            "mean_recall": 0.9555555555555556,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "false": {
+            "n_cells": 27,
+            "mean_recall": 0.9555555555555556,
+            "best_cell_id": 27,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "false",
+            "level_b": "true",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.04926264061275128,
+            "ci_95": [
+              -0.0965547756009925,
+              0.0965547756009925
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "chunk_strategy": {
+        "levels": {
+          "fixed_256": {
+            "n_cells": 18,
+            "mean_recall": 0.9714285714285713,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "fixed_512": {
+            "n_cells": 18,
+            "mean_recall": 0.9523809523809523,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "recursive_400_80": {
+            "n_cells": 18,
+            "mean_recall": 0.9428571428571428,
+            "best_cell_id": 24,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "fixed_256",
+            "level_b": "fixed_512",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.01904761904761898,
+            "se_paired": 0.04570294643947055,
+            "ci_95": [
+              -0.0705301559737433,
+              0.10862539406898127
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "fixed_256",
+            "level_b": "recursive_400_80",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.02857142857142847,
+            "se_paired": 0.04829452884162956,
+            "ci_95": [
+              -0.06608584795816547,
+              0.1232287051010224
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "fixed_512",
+            "level_b": "recursive_400_80",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.00952380952380949,
+            "se_paired": 0.053245797941061095,
+            "ci_95": [
+              -0.09483795444067025,
+              0.11388557348828923
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "top_k": {
+        "levels": {
+          "2": {
+            "n_cells": 18,
+            "mean_recall": 0.9428571428571428,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "4": {
+            "n_cells": 18,
+            "mean_recall": 0.9523809523809523,
+            "best_cell_id": 3,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "8": {
+            "n_cells": 18,
+            "mean_recall": 0.9714285714285713,
+            "best_cell_id": 6,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "2",
+            "level_b": "4",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": -0.00952380952380949,
+            "se_paired": 0.053245797941061095,
+            "ci_95": [
+              -0.11388557348828923,
+              0.09483795444067025
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "2",
+            "level_b": "8",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": -0.02857142857142847,
+            "se_paired": 0.04829452884162956,
+            "ci_95": [
+              -0.1232287051010224,
+              0.06608584795816547
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "4",
+            "level_b": "8",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": -0.01904761904761898,
+            "se_paired": 0.04570294643947055,
+            "ci_95": [
+              -0.10862539406898127,
+              0.0705301559737433
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "threshold": {
+        "levels": {
+          "null": {
+            "n_cells": 18,
+            "mean_recall": 0.9555555555555555,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "0.1": {
+            "n_cells": 18,
+            "mean_recall": 0.9555555555555555,
+            "best_cell_id": 1,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          },
+          "0.3": {
+            "n_cells": 18,
+            "mean_recall": 0.9555555555555555,
+            "best_cell_id": 2,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "0.1",
+            "level_b": "0.3",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.04926264061275133,
+            "ci_95": [
+              -0.09655477560099261,
+              0.09655477560099261
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "0.1",
+            "level_b": "null",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.04926264061275133,
+            "ci_95": [
+              -0.09655477560099261,
+              0.09655477560099261
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          },
+          {
+            "level_a": "0.3",
+            "level_b": "null",
+            "method": "unpaired_means",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.04926264061275133,
+            "ci_95": [
+              -0.09655477560099261,
+              0.09655477560099261
+            ],
+            "discriminative": false,
+            "note": "unpaired_cell_means_fallback"
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "embeddings": {
+        "levels": {
+          "hash": {
+            "n_cells": 54,
+            "mean_recall": 0.9555555555555556,
+            "best_cell_id": 0,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.9714285714285714,
+              "se": 0.02816030744597607,
+              "wilson_95": [
+                0.8546659090672868,
+                0.9949386386341466
+              ],
+              "hits": 34
+            }
+          }
+        },
+        "pairwise": [],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      }
+    },
+    "key_factors": [
+      "retrieval",
+      "rerank",
+      "chunk_strategy",
+      "top_k",
+      "threshold",
+      "embeddings"
+    ]
+  },
+  "run_v2": {
+    "label": "run_v2",
+    "n_cells": 108,
+    "cells": [
+      {
+        "cell_id": 0,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 1,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 2,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 3,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 4,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 5,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 6,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 7,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 8,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 9,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 10,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 11,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 12,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 13,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 14,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 15,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 16,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 17,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 18,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 19,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 20,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 21,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 22,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 23,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 24,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 25,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 26,
+        "config": {
+          "retrieval": true,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 27,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 28,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 29,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.37142857142857144,
+          "se": 0.08167345918877232,
+          "wilson_95": [
+            0.23165607368891059,
+            0.5366335951197893
+          ],
+          "hits": 13
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 30,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 31,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 32,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5714285714285714,
+          "se": 0.08364857768130285,
+          "wilson_95": [
+            0.4085712925897337,
+            0.7201566691832108
+          ],
+          "hits": 20
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 33,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 34,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 35,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7142857142857143,
+          "se": 0.07636035483212125,
+          "wilson_95": [
+            0.5494475193017891,
+            0.8367363660170444
+          ],
+          "hits": 25
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 36,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 37,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 38,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5142857142857142,
+          "se": 0.0844809223379282,
+          "wilson_95": [
+            0.35568539626711626,
+            0.6700601960874726
+          ],
+          "hits": 18
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 39,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 40,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 41,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 42,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 43,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 44,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7714285714285715,
+          "se": 0.07097817181807071,
+          "wilson_95": [
+            0.6098236221989801,
+            0.879342632538209
+          ],
+          "hits": 27
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 45,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 46,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 47,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.5428571428571428,
+          "se": 0.0842043882986294,
+          "wilson_95": [
+            0.38189451340137515,
+            0.6953422636623914
+          ],
+          "hits": 19
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 48,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 49,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 50,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.6857142857142857,
+          "se": 0.07846932140863945,
+          "wilson_95": [
+            0.5201992812074803,
+            0.8144934194021753
+          ],
+          "hits": 24
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 51,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 52,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 53,
+        "config": {
+          "retrieval": true,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.7428571428571429,
+          "se": 0.07387642348897154,
+          "wilson_95": [
+            0.5793037572935127,
+            0.8583713127344985
+          ],
+          "hits": 26
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 54,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 55,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 56,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 57,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 58,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 59,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 60,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 61,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 62,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 63,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 64,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 65,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 66,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 67,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 68,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 69,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 70,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 71,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 72,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 73,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 74,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 75,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 76,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 77,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 78,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 79,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 80,
+        "config": {
+          "retrieval": false,
+          "rerank": true,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 81,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 82,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 83,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 84,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 85,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 86,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 87,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 88,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 89,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_256",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 90,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 91,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 92,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 93,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 94,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 95,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 96,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 97,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 98,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "fixed_512",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 99,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 100,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 101,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 2,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 102,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 103,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 104,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 4,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 105,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": "",
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 106,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.1,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      },
+      {
+        "cell_id": 107,
+        "config": {
+          "retrieval": false,
+          "rerank": false,
+          "chunk_strategy": "recursive_400_80",
+          "top_k": 8,
+          "threshold": 0.3,
+          "embeddings": "hash",
+          "retriever": "dense"
+        },
+        "uncertainty": {
+          "n": 35,
+          "p_hat": 0.0,
+          "se": 0.0,
+          "wilson_95": [
+            0.0,
+            0.0989042675893887
+          ],
+          "hits": 0
+        },
+        "has_hit_vector": true
+      }
+    ],
+    "factors": {
+      "retrieval": {
+        "levels": {
+          "true": {
+            "n_cells": 54,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          },
+          "false": {
+            "n_cells": 54,
+            "mean_recall": 0.0,
+            "best_cell_id": 54,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.0,
+              "se": 0.0,
+              "wilson_95": [
+                0.0,
+                0.0989042675893887
+              ],
+              "hits": 0
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "false",
+            "level_b": "true",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.7714285714285715,
+            "se_paired": 0.0720144043214405,
+            "ci_95": [
+              -0.9125768038985949,
+              -0.6302803389585481
+            ],
+            "discriminative": true,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 27
+          }
+        ],
+        "discriminative": true,
+        "claim_label": "discriminative"
+      },
+      "rerank": {
+        "levels": {
+          "true": {
+            "n_cells": 27,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          },
+          "false": {
+            "n_cells": 27,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 42,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "false",
+            "level_b": "true",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 0
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "chunk_strategy": {
+        "levels": {
+          "fixed_256": {
+            "n_cells": 18,
+            "mean_recall": 0.5523809523809524,
+            "best_cell_id": 6,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7142857142857143,
+              "se": 0.07636035483212125,
+              "wilson_95": [
+                0.5494475193017891,
+                0.8367363660170444
+              ],
+              "hits": 25
+            }
+          },
+          "fixed_512": {
+            "n_cells": 18,
+            "mean_recall": 0.6571428571428571,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          },
+          "recursive_400_80": {
+            "n_cells": 18,
+            "mean_recall": 0.6571428571428571,
+            "best_cell_id": 24,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7428571428571429,
+              "se": 0.07387642348897154,
+              "wilson_95": [
+                0.5793037572935127,
+                0.8583713127344985
+              ],
+              "hits": 26
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "fixed_256",
+            "level_b": "fixed_512",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.05714285714285714,
+            "se_paired": 0.08140424227436864,
+            "ci_95": [
+              -0.21669517200061966,
+              0.1024094577149054
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 3,
+            "mcnemar_b_only": 5
+          },
+          {
+            "level_a": "fixed_256",
+            "level_b": "recursive_400_80",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.02857142857142857,
+            "se_paired": 0.06463490595976272,
+            "ci_95": [
+              -0.1552558442525635,
+              0.09811298710970635
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 2,
+            "mcnemar_b_only": 3
+          },
+          {
+            "level_a": "fixed_512",
+            "level_b": "recursive_400_80",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": 0.02857142857142857,
+            "se_paired": 0.049969978982583214,
+            "ci_95": [
+              -0.06936973023443453,
+              0.12651258737729168
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 2,
+            "mcnemar_b_only": 1
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "top_k": {
+        "levels": {
+          "2": {
+            "n_cells": 18,
+            "mean_recall": 0.47619047619047616,
+            "best_cell_id": 18,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.5428571428571428,
+              "se": 0.0842043882986294,
+              "wilson_95": [
+                0.38189451340137515,
+                0.6953422636623914
+              ],
+              "hits": 19
+            }
+          },
+          "4": {
+            "n_cells": 18,
+            "mean_recall": 0.6476190476190475,
+            "best_cell_id": 12,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.6857142857142857,
+              "se": 0.07846932140863945,
+              "wilson_95": [
+                0.5201992812074803,
+                0.8144934194021753
+              ],
+              "hits": 24
+            }
+          },
+          "8": {
+            "n_cells": 18,
+            "mean_recall": 0.7428571428571429,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "2",
+            "level_b": "4",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.14285714285714285,
+            "se_paired": 0.060012003601200424,
+            "ci_95": [
+              -0.2604806699154957,
+              -0.02523361579879002
+            ],
+            "discriminative": true,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 5
+          },
+          {
+            "level_a": "2",
+            "level_b": "8",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.22857142857142856,
+            "se_paired": 0.0720144043214405,
+            "ci_95": [
+              -0.36971966104145193,
+              -0.08742319610140517
+            ],
+            "discriminative": true,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 8
+          },
+          {
+            "level_a": "4",
+            "level_b": "8",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": -0.08571428571428572,
+            "se_paired": 0.04800960288096033,
+            "ci_95": [
+              -0.17981310736096795,
+              0.008384535932396533
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 3
+          }
+        ],
+        "discriminative": true,
+        "claim_label": "discriminative"
+      },
+      "threshold": {
+        "levels": {
+          "null": {
+            "n_cells": 18,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          },
+          "0.1": {
+            "n_cells": 18,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 16,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          },
+          "0.3": {
+            "n_cells": 18,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 17,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          }
+        },
+        "pairwise": [
+          {
+            "level_a": "0.1",
+            "level_b": "0.3",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 0
+          },
+          {
+            "level_a": "0.1",
+            "level_b": "null",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 0
+          },
+          {
+            "level_a": "0.3",
+            "level_b": "null",
+            "method": "paired_hit_vector",
+            "n": 35,
+            "mean_delta": 0.0,
+            "se_paired": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "discriminative": false,
+            "mcnemar_a_only": 0,
+            "mcnemar_b_only": 0
+          }
+        ],
+        "discriminative": false,
+        "claim_label": "non-discriminative"
+      },
+      "embeddings": {
+        "levels": {
+          "hash": {
+            "n_cells": 54,
+            "mean_recall": 0.6222222222222222,
+            "best_cell_id": 15,
+            "best_uncertainty": {
+              "n": 35,
+              "p_hat": 0.7714285714285715,
+              "se": 0.07097817181807071,
+              "wilson_95": [
+                0.6098236221989801,
+                0.879342632538209
+              ],
+              "hits": 27
+            }
+          }
+        },
+        "pairwise": [],
+        "discriminative": false,
+        "claim_label": "single_level_in_main_grid",
+        "see_also": "embeddings_contrast_ac4"
+      }
+    },
+    "key_factors": [
+      "retrieval",
+      "rerank",
+      "chunk_strategy",
+      "top_k",
+      "threshold",
+      "embeddings"
+    ]
+  },
+  "v1_non_discriminative_expected": [
+    "rerank",
+    "threshold"
+  ],
+  "embeddings_contrast_ac4": {
+    "contrast_type": "hash_vs_minilm_semantic",
+    "AC4_semantic": "met",
+    "paired": {
+      "hash_vs": "minilm",
+      "n": 35,
+      "mean_delta": -0.37142857142857144,
+      "se_paired": 0.09245225236621893,
+      "ci_95": [
+        -0.5526349860663605,
+        -0.19022215679078233
+      ],
+      "discriminative": true,
+      "mcnemar_a_only": 1,
+      "mcnemar_b_only": 14
+    },
+    "claim_label": "discriminative",
+    "note": "Primary AC4 evidence is same-slice hash vs minilm, not the hash-only main grid",
+    "recalls": {
+      "hash": 0.5714285714285714,
+      "tfidf": 0.4,
+      "minilm": 0.9428571428571428
+    }
+  }
+}

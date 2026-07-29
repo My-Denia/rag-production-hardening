@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "arm_id": "minilm_dense_k8_r1",
+  "hash_run1": "c47caf7f7c1a2acc4e72b369b8433e048dbbb4053b2a2aee9cff709e13ffadbf",
+  "hash_run2": "c47caf7f7c1a2acc4e72b369b8433e048dbbb4053b2a2aee9cff709e13ffadbf",
+  "identical": true
+}

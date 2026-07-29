@@ -1,0 +1,104 @@
+# Frozen evaluation arms — exactly 10. Do not edit after selection_rules snapshot.
+arms:
+  - id: hash_dense_k4_r0
+    embeddings: hash
+    retriever: dense
+    top_k: 4
+    rerank: false
+    chunk_strategy: fixed_256
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+
+  - id: hash_dense_k8_r1
+    embeddings: hash
+    retriever: dense
+    top_k: 8
+    rerank: true
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+
+  - id: minilm_dense_k8_r1
+    embeddings: minilm
+    retriever: dense
+    top_k: 8
+    rerank: true
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+
+  - id: bm25_k8_r0
+    embeddings: hash
+    retriever: bm25
+    top_k: 8
+    rerank: false
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+
+  - id: hybrid_rrf_k8_r1
+    embeddings: minilm
+    retriever: hybrid_rrf
+    top_k: 8
+    rerank: true
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+    rrf_k: 60
+
+  - id: hybrid_rrf_k8_r0
+    embeddings: minilm
+    retriever: hybrid_rrf
+    top_k: 8
+    rerank: false
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+    rrf_k: 60
+
+  - id: recursive_minilm_k8_r1
+    embeddings: minilm
+    retriever: dense
+    top_k: 8
+    rerank: true
+    chunk_strategy: recursive_400_80
+    query_strategy: raw
+    abstain: none
+    retrieval: true
+
+  - id: minilm_dense_k8_r1_margin
+    embeddings: minilm
+    retriever: dense
+    top_k: 8
+    rerank: true
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: margin_0.05
+    retrieval: true
+
+  - id: minilm_mq_k8_r1
+    embeddings: minilm
+    retriever: dense
+    top_k: 8
+    rerank: true
+    chunk_strategy: fixed_512
+    query_strategy: multi_query_static
+    abstain: none
+    retrieval: true
+    rrf_k: 60
+
+  - id: retrieval_off_control
+    embeddings: hash
+    retriever: dense
+    top_k: 8
+    rerank: false
+    chunk_strategy: fixed_512
+    query_strategy: raw
+    abstain: none
+    retrieval: false

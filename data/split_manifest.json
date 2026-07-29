@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "seed": 7,
+  "n_new": 122,
+  "n_dev": 84,
+  "n_holdout": 38,
+  "by_category_total": {
+    "lexical": 12,
+    "paraphrase": 12,
+    "low_overlap_semantic": 12,
+    "hard_negative": 11,
+    "unanswerable": 12,
+    "cross_chunk": 11,
+    "multi_evidence": 11,
+    "near_dup": 11,
+    "noise": 10,
+    "contradiction": 10,
+    "injection": 10
+  },
+  "by_category_dev": {
+    "lexical": 8,
+    "paraphrase": 8,
+    "low_overlap_semantic": 8,
+    "hard_negative": 8,
+    "unanswerable": 7,
+    "cross_chunk": 8,
+    "multi_evidence": 8,
+    "near_dup": 8,
+    "noise": 7,
+    "contradiction": 7,
+    "injection": 7
+  },
+  "by_category_holdout": {
+    "lexical": 4,
+    "paraphrase": 4,
+    "low_overlap_semantic": 4,
+    "hard_negative": 3,
+    "unanswerable": 5,
+    "cross_chunk": 3,
+    "multi_evidence": 3,
+    "near_dup": 3,
+    "noise": 3,
+    "contradiction": 3,
+    "injection": 3
+  },
+  "holdout_sha256": "5ac7cf692ffe0122db338ed8a6e00e23fcf1a1cb2f05b8c154e56193ac4aba40",
+  "dev_sha256": "a9bd3254fc20fe6e2b5c77acafeaac092c48479cc3f28359ce41069cd7f7f4d5",
+  "new_sha256": "4a04f3537bc6509b9d6b54a930a6286599c45b18c455ea8cf69cbf972867ffc9"
+}
