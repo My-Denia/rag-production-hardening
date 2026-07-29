@@ -53,9 +53,17 @@ pytest -q
 
 Machine-readable summary after release packaging:
 
-- `results/release/reproduction.json`
+- `results/release/reproduction.json` (**schema 2** — recompute protocol + gates; no `public_commit`)
 - `results/release/public-manifest.sha256`
 - `results/release/security-scan.json`
+
+Final release commit SHA is **not** stored in tracked files. It appears in the GitHub Release asset `release-attestation-v0.2.1.json` after tag creation (see `docs/release-attestation.md`).
+
+Verify gates from artifacts:
+
+```bash
+python -m rag_bench.verify_public_evidence
+```
 
 ## Sanitize (maintainers)
 

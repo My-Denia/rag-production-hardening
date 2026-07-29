@@ -1,6 +1,7 @@
 # rag-bench (production-hardening)
 
 [![CI](https://github.com/My-Denia/rag-production-hardening/actions/workflows/ci.yml/badge.svg)](https://github.com/My-Denia/rag-production-hardening/actions/workflows/ci.yml)
+[![Full recompute](https://github.com/My-Denia/rag-production-hardening/actions/workflows/full-recompute.yml/badge.svg)](https://github.com/My-Denia/rag-production-hardening/actions/workflows/full-recompute.yml)
 
 Evaluable retrieval-augmented QA with **LangChain / LangGraph** stateful orchestration, **external-judge** metrics, **frozen arms**, **holdout-confirmed selection**, **multi-stage process-kill recovery**, and **session isolation**.
 
@@ -10,10 +11,11 @@ Synthetic corpus only (fictional company handbook). Offline-first — MiniLM loc
 
 | | |
 | --- | --- |
-| Version | **0.2.0** |
+| Version | **0.2.1** |
 | License | [MIT](LICENSE) |
 | Data card | [DATA_CARD.md](DATA_CARD.md) |
 | Evidence index | [docs/public-evidence.md](docs/public-evidence.md) |
+| Release attestation | [docs/release-attestation.md](docs/release-attestation.md) · [v0.2.1 Release](https://github.com/My-Denia/rag-production-hardening/releases/tag/v0.2.1) |
 
 ## Install
 
@@ -145,6 +147,43 @@ History preserved: `results/run_v1/`, `results/run_v2/` (metrics + selected snap
 pytest -q
 ```
 
+## Verify public evidence (machine-checkable)
+
+```bash
+python -m rag_bench.verify_public_evidence
+# or:
+python scripts/verify_public_evidence.py
+```
+
+Reads committed JSON under `results/` (not README prose). Fails non-zero if regression dual 35/35, holdout, significance, concurrency, recovery, freeze, or schema-2 reproduction binding are inconsistent.
+
+## Fast CI vs full recompute
+
+| Pipeline | Trigger | What it proves |
+| --- | --- | --- |
+| **Fast CI** ([ci.yml](https://github.com/My-Denia/rag-production-hardening/actions/workflows/ci.yml)) | push / PR | pytest + freeze verify + security scan on Windows Python 3.11/3.12 |
+| **Full recompute** ([full-recompute.yml](https://github.com/My-Denia/rag-production-hardening/actions/workflows/full-recompute.yml)) | `workflow_dispatch` on a chosen ref | `python -m rag_bench.run_all` + pytest + freeze + public evidence verifier + scan + tracked `git diff --exit-code` |
+
+Fast CI does **not** substitute for a remote full recompute. After tagging, the Release asset `release-attestation-v0.2.1.json` records `release_commit` (see [docs/release-attestation.md](docs/release-attestation.md)).
+
+To confirm the tag commit:
+
+```bash
+git clone --branch v0.2.1 --depth 1 https://github.com/My-Denia/rag-production-hardening.git
+cd rag-production-hardening
+git rev-parse HEAD   # must match Release attestation release_commit
+python -m venv .venv && .\.venv\Scripts\Activate.ps1
+pip install -e ".[dev,semantic]"
+python -m rag_bench.freeze_regression --verify
+pytest -q
+python -m rag_bench.verify_public_evidence
+python scripts/sanitize_public_tree.py --scan-only
+```
+
+**Holdout is published for recompute only** — not for future unbiased hyperparameter tuning or arm shopping.
+
+Core metrics in the table above must match committed JSON; the verifier enforces this. Do not treat narrative README numbers as authoritative if they diverge from artifacts.
+
 ## Sanitize (maintainers)
 
 After recompute, strip absolute machine paths and prune non-whitelisted results:
@@ -155,4 +194,4 @@ python scripts/sanitize_public_tree.py --prune --write-reproduction --write-mani
 
 ## Non-goals
 
-Paid API default; real PII; multi-tenant production deploy; hardcoding gold answers; holdout re-rank shopping; claiming dual 35/35 from recall alone.
+Paid API default; real PII; multi-tenant production deploy; hardcoding gold answers; holdout re-rank shopping; claiming dual 35/35 from recall alone; claiming RAG quality gains in evidence-hardening patches.

@@ -18,3 +18,16 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+# Volatile local recompute traces (not release evidence)
+results/traces/
+# Local full-recompute / release evidence dumps (untracked)
+results/release/local-evidence/
+release-attestation-*.json
+release-attestation-*.sha256
+remote-clone-full-recompute-*.json
+full-recompute-evidence-*.json
+
+# Non-whitelisted legacy recovery side files
+results/recovery.json
+results/recovery_legacy_cooperative.json
+

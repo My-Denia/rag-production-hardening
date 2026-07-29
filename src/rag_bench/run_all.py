@@ -293,11 +293,14 @@ def main(argv: list[str] | None = None) -> int:
         for lab in reg_labels:
             lab.setdefault("answerable", True)
             lab.setdefault("category", "lexical")
+        from rag_bench.eval import stable_metrics_for_disk
+
         reg_res = evaluate_arm_on_labels(arm, reg_labels, index_cache={key: idx})
         regression_metrics = reg_res["metrics"]
         regression_metrics["arm_id"] = use_id
         (RESULTS_DIR / "regression_metrics.json").write_text(
-            json.dumps(regression_metrics, indent=2) + "\n", encoding="utf-8"
+            json.dumps(stable_metrics_for_disk(regression_metrics), indent=2) + "\n",
+            encoding="utf-8",
         )
         n_ans = int(regression_metrics.get("n_answerable") or regression_metrics.get("n") or 0)
         hits = int(regression_metrics.get("recall_hits") or 0)
@@ -502,9 +505,13 @@ def main(argv: list[str] | None = None) -> int:
         # metrics.json from selected if holdout pass
         sel = load_selected()
         if holdout_conf.get("pass") and (RESULTS_DIR / "arms" / f"holdout_{holdout_conf['winner_id']}.json").exists():
+            from rag_bench.eval import stable_metrics_for_disk
+
             hm = _load_json(RESULTS_DIR / "arms" / f"holdout_{holdout_conf['winner_id']}.json")
             (RESULTS_DIR / "metrics.json").write_text(
-                json.dumps(hm.get("metrics") or {}, indent=2) + "\n", encoding="utf-8"
+                json.dumps(stable_metrics_for_disk(hm.get("metrics") or {}), indent=2)
+                + "\n",
+                encoding="utf-8",
             )
         print(f"status → {status_path}")
         write_trace_event(trace_id, "run_all_end", {"needs_replan": needs_replan, "n_notes": len(notes)})

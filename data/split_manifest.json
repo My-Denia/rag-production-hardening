@@ -43,7 +43,8 @@
     "contradiction": 3,
     "injection": 3
   },
-  "holdout_sha256": "5ac7cf692ffe0122db338ed8a6e00e23fcf1a1cb2f05b8c154e56193ac4aba40",
-  "dev_sha256": "a9bd3254fc20fe6e2b5c77acafeaac092c48479cc3f28359ce41069cd7f7f4d5",
-  "new_sha256": "4a04f3537bc6509b9d6b54a930a6286599c45b18c455ea8cf69cbf972867ffc9"
+  "holdout_sha256": "9120e9a57824c662d5cef7a0d40e58b7c85684a933b3385bfa125e0a721b0dc2",
+  "dev_sha256": "6d1af1a4e24f72d43b44484332baf03379d0cb4d2a1c3652d1c57c8f928b1fd1",
+  "new_sha256": "1fd992ce5628a5c1bdef67d4cd915faab34ce2de1cca35c0ae4a85acf2dfaf12",
+  "hash_mode": "lf_normalized"
 }

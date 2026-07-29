@@ -2,14 +2,28 @@
 
 Pointers to machine-checkable artifacts in this repository. Prefer these files over narrative claims.
 
+## Evidence chain (claim → artifact → verify → workflow → attestation → tag)
+
+| Step | What | Where / command |
+| --- | --- | --- |
+| 1. Claim | Dual 35/35, holdout pass, concurrency, recovery | README / CHANGELOG (narrative only) |
+| 2. Source artifact | Machine JSON | `results/regression_metrics.json`, `holdout_confirmation.json`, … |
+| 3. Verify | Local machine-check | `python -m rag_bench.verify_public_evidence` |
+| 4. Fast CI | pytest + freeze + scan | [ci.yml](https://github.com/My-Denia/rag-production-hardening/actions/workflows/ci.yml) |
+| 5. Full recompute | Clean `run_all` on GitHub | [full-recompute.yml](https://github.com/My-Denia/rag-production-hardening/actions/workflows/full-recompute.yml) |
+| 6. Release attestation | Post-tag `release_commit` binding | Release asset `release-attestation-v0.2.1.json` (see [release-attestation.md](release-attestation.md)) |
+| 7. Tag commit | Immutable peel of `v0.2.1` | `git rev-parse v0.2.1` must equal attestation `release_commit` |
+
 ## Release packaging
 
 | Artifact | Path |
 | --- | --- |
 | Security scan | `results/release/security-scan.json` |
-| Reproduction summary | `results/release/reproduction.json` |
+| Reproduction summary (schema 2) | `results/release/reproduction.json` |
 | File checksums | `results/release/public-manifest.sha256` |
-| Preflight | `docs/preflight.md` |
+| Release attestation design | `docs/release-attestation.md` |
+| v0.2.1 preflight | `docs/release/v0.2.1-preflight.md` |
+| Preflight (0.2.0) | `docs/preflight.md` |
 | Data card | `DATA_CARD.md` |
 | License | `LICENSE` |
 
@@ -68,7 +82,10 @@ All under `results/arms/`:
 pip install -e ".[dev,semantic]"
 python -m rag_bench.run_all
 pytest -q
-python -c "import json; m=json.load(open('results/regression_metrics.json')); assert m['recall_hits']==35 and m['attribution_hits']==35"
-python -c "import json; h=json.load(open('results/holdout_confirmation.json')); assert h['pass'] is True"
+python -m rag_bench.freeze_regression --verify
+python -m rag_bench.verify_public_evidence
 python scripts/sanitize_public_tree.py --scan-only
+git diff --exit-code
 ```
+
+`reproduction.json` is schema **2**: no `public_commit`. Final tag SHA lives only in the post-tag Release attestation asset.

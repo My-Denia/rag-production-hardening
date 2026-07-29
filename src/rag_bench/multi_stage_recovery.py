@@ -343,29 +343,13 @@ def run_multi_stage_report(*, hold_sec: float = 3.5, write: bool = True) -> dict
     }
     if write:
         ensure_dirs()
+        # ensure_ascii=False keeps em-dash etc. stable vs \uXXXX escapes across runs
         (RESULTS_DIR / "recovery_report.json").write_text(
-            json.dumps(report, indent=2) + "\n",
+            json.dumps(report, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
             newline="\n",
         )
-        # also keep legacy recovery.json from retrieve stage if present
-        if stages.get("retrieve"):
-            legacy = {
-                "mode": "process_kill",
-                "cooperative_interrupt_used": False,
-                "kill_method": stages["retrieve"].get("kill_method"),
-                "worker_dead": stages["retrieve"].get("worker_dead"),
-                "pre_kill_stage": "retrieve",
-                "hash_match": stages["retrieve"].get("hash_match"),
-                "ok": stages["retrieve"].get("ok"),
-                "multi_stage": True,
-                "work_dir": "<REDACTED_TEMP_DIR>",
-            }
-            (RESULTS_DIR / "recovery.json").write_text(
-                json.dumps(legacy, indent=2) + "\n",
-                encoding="utf-8",
-                newline="\n",
-            )
+        # Do not write non-whitelisted recovery.json (pollutes porcelain status).
     return report
 
 

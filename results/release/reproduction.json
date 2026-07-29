@@ -1,11 +1,15 @@
 {
-  "schema": 1,
+  "schema": 2,
   "package": "rag-bench",
-  "version": "0.2.0",
-  "public_commit": "b5f5106b41197b1a60ca1bc59ab7cf8fbaa36a06",
+  "version": "0.2.1",
   "recompute_command": "python -m rag_bench.run_all",
   "install": "pip install -e \".[dev,semantic]\"",
   "python_requires": ">=3.11",
+  "commit_binding": {
+    "type": "release-attestation",
+    "asset": "release-attestation-v0.2.1.json",
+    "reason": "The final release commit is recorded after tag creation in the GitHub Release attestation asset to avoid a tracked-file self-reference loop. Tracked reproduction.json describes the recompute protocol and gate snapshot only."
+  },
   "gates": {
     "regression_recall_hits": 35,
     "regression_attribution_hits": 35,
@@ -13,6 +17,11 @@
     "holdout_pass": true,
     "holdout_winner": "recursive_minilm_k8_r1",
     "holdout_recall_at_k": 1.0,
+    "holdout_attribution_rate": 0.9393939393939394,
+    "re_ranked_on_holdout": false,
+    "bootstrap_point_delta": 0.15151515151515152,
+    "bootstrap_ci_low": 0.030303030303030304,
+    "bootstrap_ci_high": 0.30303030303030304,
     "concurrency_ok": true,
     "concurrency_n_ok": 20,
     "concurrency_cross_talk": 0,
@@ -25,6 +34,9 @@
     "regression_metrics": "results/regression_metrics.json",
     "holdout_confirmation": "results/holdout_confirmation.json",
     "quality_report": "results/quality_report.json",
+    "recovery_report": "results/recovery_report.json",
+    "concurrency_report": "results/concurrency_report.json",
+    "freeze_report": "results/freeze_report.json",
     "security_scan": "results/release/security-scan.json"
   }
 }

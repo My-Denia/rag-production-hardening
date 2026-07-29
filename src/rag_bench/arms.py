@@ -129,10 +129,12 @@ def run_all_arms_dev(
         res = evaluate_arm_on_labels(arm, labels, index_cache=index_cache, median_dev=mid)
         results[arm["id"]] = res
         if write:
+            from rag_bench.eval import stable_metrics_for_disk
+
             out = {
                 "arm_id": res["arm_id"],
                 "cfg": res["cfg"],
-                "metrics": res["metrics"],
+                "metrics": stable_metrics_for_disk(res["metrics"]),
                 "hit_vector": res["hit_vector"],
                 "attr_vector": res["attr_vector"],
                 "qids": res["qids"],

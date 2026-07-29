@@ -511,7 +511,9 @@ def build_and_split(*, seed: int | None = None) -> dict[str, Any]:
     write_jsonl(DEV_LABELS, dev)
     write_jsonl(HOLDOUT_LABELS, holdout)
 
-    h_sha = sha256_file(HOLDOUT_LABELS)
+    from rag_bench.freeze_regression import sha256_text_file
+
+    h_sha = sha256_text_file(HOLDOUT_LABELS)
     HOLDOUT_MANIFEST.write_text(
         json.dumps(
             {
@@ -520,6 +522,7 @@ def build_and_split(*, seed: int | None = None) -> dict[str, Any]:
                 "labels_sha256": h_sha,
                 "seed": seed,
                 "sealed": True,
+                "hash_mode": "lf_normalized",
             },
             indent=2,
         )
@@ -536,8 +539,9 @@ def build_and_split(*, seed: int | None = None) -> dict[str, Any]:
         "by_category_dev": {c: sum(1 for x in dev if x["category"] == c) for c in by_cat},
         "by_category_holdout": {c: sum(1 for x in holdout if x["category"] == c) for c in by_cat},
         "holdout_sha256": h_sha,
-        "dev_sha256": sha256_file(DEV_LABELS),
-        "new_sha256": sha256_file(NEW_LABELS_PATH),
+        "dev_sha256": sha256_text_file(DEV_LABELS),
+        "new_sha256": sha256_text_file(NEW_LABELS_PATH),
+        "hash_mode": "lf_normalized",
     }
     SPLIT_MANIFEST.write_text(json.dumps(split_info, indent=2) + "\n", encoding="utf-8")
     return split_info

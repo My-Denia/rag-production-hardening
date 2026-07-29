@@ -1,0 +1,180 @@
+name: full-recompute
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to checkout (branch, tag, or full SHA)"
+        required: false
+        default: ""
+        type: string
+
+env:
+  PYTHONUTF8: "1"
+  HF_HOME: ${{ github.workspace }}/.cache/huggingface
+  TRANSFORMERS_CACHE: ${{ github.workspace }}/.cache/huggingface
+  SENTENCE_TRANSFORMERS_HOME: ${{ github.workspace }}/.cache/sentence-transformers
+
+jobs:
+  full-recompute:
+    runs-on: windows-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref != '' && inputs.ref || github.sha }}
+          fetch-depth: 0
+
+      - name: Record head SHA
+        id: meta
+        shell: bash
+        run: |
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "ref_name=$(git rev-parse --abbrev-ref HEAD)" >> "$GITHUB_OUTPUT"
+          python --version || true
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache MiniLM / HF models
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/huggingface
+            .cache/sentence-transformers
+          key: ${{ runner.os }}-models-py312-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-models-py312-
+
+      - name: Upgrade pip
+        run: python -m pip install -U pip
+
+      - name: Install package (dev + semantic)
+        run: pip install -e ".[dev,semantic]"
+
+      - name: Full recompute (run_all)
+        id: run_all
+        run: python -m rag_bench.run_all
+
+      - name: Pytest
+        id: pytest
+        run: pytest -q
+
+      - name: Freeze verify
+        id: freeze
+        run: python -c "from rag_bench.freeze_regression import verify; r=verify(); print(r); raise SystemExit(0 if r.get('ok') else 1)"
+
+      - name: Public evidence verifier
+        id: evidence
+        run: python -m rag_bench.verify_public_evidence
+
+      - name: Security / path scan
+        id: scan
+        run: python scripts/sanitize_public_tree.py --scan-only
+
+      - name: Working tree clean (tracked)
+        id: gitdiff
+        shell: bash
+        run: |
+          git status --porcelain
+          git diff --exit-code
+          echo "working_tree_clean=true" >> "$GITHUB_OUTPUT"
+
+      - name: Build machine-readable evidence
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, platform, subprocess, sys
+          from pathlib import Path
+
+          root = Path(".").resolve()
+          def sha(rel):
+              p = root / rel
+              if not p.is_file():
+                  return None
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+
+          def load(rel):
+              p = root / rel
+              if not p.is_file():
+                  return None
+              return json.loads(p.read_text(encoding="utf-8"))
+
+          head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          reg = load("results/regression_metrics.json") or {}
+          hold = load("results/holdout_confirmation.json") or {}
+          conc = load("results/concurrency_report.json") or {}
+          rec = load("results/recovery_report.json") or {}
+          primary = (hold.get("holdout_primary_metrics") or {})
+          boot = (hold.get("bootstrap") or {})
+
+          # desensitized: no absolute paths, no caches
+          evidence = {
+              "schema": 1,
+              "repository": "My-Denia/rag-production-hardening",
+              "head_sha": head,
+              "ref": os.environ.get("GITHUB_REF", ""),
+              "os": platform.platform(),
+              "python": sys.version.split()[0],
+              "runner": "windows-latest",
+              "gates": {
+                  "run_all": True,
+                  "pytest": True,
+                  "freeze": True,
+                  "public_evidence": True,
+                  "security_scan": True,
+                  "working_tree_clean_after_recompute": True,
+              },
+              "metrics": {
+                  "regression_recall_hits": reg.get("recall_hits"),
+                  "regression_attribution_hits": reg.get("attribution_hits"),
+                  "holdout_pass": hold.get("pass"),
+                  "holdout_winner": hold.get("winner_id"),
+                  "holdout_recall_at_k": primary.get("recall_at_k"),
+                  "holdout_attribution_rate": primary.get("attribution_rate"),
+                  "bootstrap_point_delta": boot.get("point_delta"),
+                  "bootstrap_ci_low": boot.get("ci_low"),
+                  "bootstrap_ci_high": boot.get("ci_high"),
+                  "concurrency_n_ok": conc.get("n_ok"),
+                  "concurrency_cross_talk": conc.get("cross_talk"),
+                  "recovery_ok": rec.get("ok"),
+              },
+              "artifact_sha256": {
+                  rel: sha(rel)
+                  for rel in [
+                      "results/regression_metrics.json",
+                      "results/holdout_confirmation.json",
+                      "results/recovery_report.json",
+                      "results/concurrency_report.json",
+                      "results/release/reproduction.json",
+                      "results/freeze_report.json",
+                  ]
+              },
+          }
+          out_dir = root / "results" / "release" / "local-evidence"
+          out_dir.mkdir(parents=True, exist_ok=True)
+          out = out_dir / "full-recompute-evidence.json"
+          out.write_text(json.dumps(evidence, indent=2) + "\n", encoding="utf-8")
+          print(out.read_text(encoding="utf-8")[:2000])
+          PY
+
+      - name: Upload desensitized evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-recompute-evidence
+          path: |
+            results/release/local-evidence/full-recompute-evidence.json
+            results/regression_metrics.json
+            results/holdout_confirmation.json
+            results/recovery_report.json
+            results/concurrency_report.json
+            results/release/reproduction.json
+            results/freeze_report.json
+            results/release/security-scan.json
+          if-no-files-found: warn
+          retention-days: 30

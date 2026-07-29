@@ -9,8 +9,6 @@
       "unsupported_answer_rate": 0.25,
       "error_citation_rate": 1.0,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 7.8711999994993676,
-      "latency_p95_ms": 10.732900002039969,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -23,8 +21,6 @@
       "unsupported_answer_rate": 0.2261904761904762,
       "error_citation_rate": 0.961038961038961,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 7.121599999663886,
-      "latency_p95_ms": 11.690600000292761,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -37,8 +33,6 @@
       "unsupported_answer_rate": 0.14285714285714285,
       "error_citation_rate": 0.974025974025974,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 18.59360000162269,
-      "latency_p95_ms": 19.935199998144526,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -51,8 +45,6 @@
       "unsupported_answer_rate": 0.17857142857142858,
       "error_citation_rate": 0.6493506493506493,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 7.685900000069523,
-      "latency_p95_ms": 10.616999999911059,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -65,8 +57,6 @@
       "unsupported_answer_rate": 0.16666666666666666,
       "error_citation_rate": 0.987012987012987,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 18.97319999989122,
-      "latency_p95_ms": 20.32350000081351,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -79,8 +69,6 @@
       "unsupported_answer_rate": 0.15476190476190477,
       "error_citation_rate": 0.987012987012987,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 19.004199999471894,
-      "latency_p95_ms": 20.381099999212893,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -93,8 +81,6 @@
       "unsupported_answer_rate": 0.10714285714285714,
       "error_citation_rate": 0.974025974025974,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 17.82190000085393,
-      "latency_p95_ms": 18.987100000231294,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -107,8 +93,6 @@
       "unsupported_answer_rate": 0.0875,
       "error_citation_rate": 0.7532467532467533,
       "refusal_f1": 0.2857142857142857,
-      "latency_p50_ms": 18.394799997622613,
-      "latency_p95_ms": 19.67309999963618,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -121,8 +105,6 @@
       "unsupported_answer_rate": 0.14285714285714285,
       "error_citation_rate": 0.987012987012987,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 25.933799999620533,
-      "latency_p95_ms": 34.294799999770476,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -135,8 +117,6 @@
       "unsupported_answer_rate": 1.0,
       "error_citation_rate": 0.0,
       "refusal_f1": 0.0,
-      "latency_p50_ms": 5.952300001808908,
-      "latency_p95_ms": 7.712599999649683,
       "n": 84,
       "n_answerable": 77,
       "n_unanswerable": 7
@@ -859,10 +839,6 @@
       }
     }
   },
-  "latency_p50_ms": 14.735250000012456,
-  "latency_p95_ms": 34.294799999770476,
-  "peak_rss_mb": null,
-  "index_bytes": 0,
   "selection": {
     "winner_id": "recursive_minilm_k8_r1",
     "rule_hash": "ab76cb29861f9310746ecb261a02c258499a249ef04693daca94d16b2c57b04b",
@@ -1053,45 +1029,6 @@
       0.7522496319650893,
       0.6769824103952924,
       0.5348177206647746
-    ],
-    "latency_p50_ms": 17.86029999857419,
-    "latency_p95_ms": 20.376099997520214,
-    "latencies_ms": [
-      20.0674000006984,
-      18.3686000018497,
-      18.307000002096174,
-      19.523900002241135,
-      17.697699997370364,
-      18.43130000270321,
-      17.627599998377264,
-      17.89709999866318,
-      20.376099997520214,
-      17.86029999857419,
-      18.503600000258302,
-      18.672300000616815,
-      17.938899996806867,
-      17.95690000290051,
-      18.537000003561843,
-      18.665899999177782,
-      13.88520000182325,
-      11.679899998853216,
-      12.89829999950598,
-      12.678699997195508,
-      12.338199998339405,
-      14.037200002348982,
-      16.282100001262734,
-      14.036700002179714,
-      18.26650000293739,
-      18.314599998120684,
-      17.33080000121845,
-      20.890400002826937,
-      17.76109999991604,
-      18.65879999968456,
-      16.81749999988824,
-      13.748399996984517,
-      16.64129999699071,
-      17.839899999671616,
-      17.11970000178553
     ],
     "by_category": {
       "lexical": {

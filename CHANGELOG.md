@@ -5,6 +5,26 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] — 2026-07-29
+
+### Added
+
+- Machine-checkable public evidence verifier: `python -m rag_bench.verify_public_evidence` / `scripts/verify_public_evidence.py` (with negative tests)
+- Manually dispatchable `full-recompute` GitHub Actions workflow (Windows, Python 3.12): `run_all` → pytest → freeze → verifier → scan → `git diff --exit-code`
+- `docs/release-attestation.md` explaining tracked evidence vs post-tag Release attestation
+- Post-tag Release attestation design (`release-attestation-v0.2.1.json` as Release asset, not a tracked file)
+
+### Changed
+
+- Package version **0.2.1** (evidence-hardening patch only; **no** RAG quality or production-readiness claims)
+- `results/release/reproduction.json` upgraded to **schema 2**: removes ambiguous `public_commit`; binds final release SHA via `commit_binding.type = release-attestation`
+- Tracked metrics omit wall-clock latency fields so full recompute stays path/time-agnostic on tracked files
+
+### Notes
+
+- Frozen science inputs (`data/regression_v1/`, dev/holdout labels, `config/arms.yaml`, selection rules) unchanged
+- Core gate readings (dual 35/35, holdout winner, significance, concurrency, recovery) are re-verified, not re-marketed as quality gains
+
 ## [0.2.0] — 2026-07-29
 
 ### Added

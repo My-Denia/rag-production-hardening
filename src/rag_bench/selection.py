@@ -83,6 +83,8 @@ def write_dev_shortlist(dev_arm_results: dict[str, Any]) -> dict[str, Any]:
     exclude = {"retrieval_off_control"}
     ranking_ids = lexicographic_rank(metrics_map, rules, exclude=exclude)
     primary_id = ranking_ids[0]
+    from rag_bench.eval import stable_metrics_for_disk
+
     ranking = []
     for i, aid in enumerate(ranking_ids, start=1):
         m = metrics_map[aid]
@@ -95,7 +97,6 @@ def write_dev_shortlist(dev_arm_results: dict[str, Any]) -> dict[str, Any]:
                     "recall_at_k": m.get("recall_at_k"),
                     "refusal_f1": m.get("refusal_f1"),
                     "error_citation_rate": m.get("error_citation_rate"),
-                    "latency_p95_ms": m.get("latency_p95_ms"),
                 },
             }
         )
@@ -106,13 +107,15 @@ def write_dev_shortlist(dev_arm_results: dict[str, Any]) -> dict[str, Any]:
         "shortlist_size": 1,
         "primary": {
             "arm_id": primary_id,
-            "dev_metrics": metrics_map[primary_id],
+            "dev_metrics": stable_metrics_for_disk(metrics_map[primary_id]),
         },
         "baseline_arm_id": rules.get("baseline_arm_id", "hash_dense_k8_r1"),
         "ranking": ranking,
         "selection_rules_sha256": rules_content_hash(),
     }
-    DEV_SHORTLIST.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    DEV_SHORTLIST.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
     return payload
 
 
@@ -298,13 +301,15 @@ def finalize_selection(
         )
 
         # holdout arm metric files
+        from rag_bench.eval import stable_metrics_for_disk
+
         ARMS_RESULTS.mkdir(parents=True, exist_ok=True)
         for res in (primary_res, baseline_res):
             (ARMS_RESULTS / f"holdout_{res['arm_id']}.json").write_text(
                 json.dumps(
                     {
                         "arm_id": res["arm_id"],
-                        "metrics": res["metrics"],
+                        "metrics": stable_metrics_for_disk(res["metrics"]),
                         "hit_vector": res["hit_vector"],
                         "qids": res["qids"],
                     },

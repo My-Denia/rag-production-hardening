@@ -417,6 +417,7 @@ def _build_scan_patterns() -> list[tuple[str, re.Pattern[str], str]]:
 # Files that document scan rules; skip self-hit noise for pattern inventory only.
 _SCAN_SKIP_RELS = {
     SELF_REL,
+    "src/rag_bench/verify_public_evidence.py",
 }
 
 
@@ -507,6 +508,11 @@ def security_scan(root: Path) -> dict[str, Any]:
 
 
 def write_reproduction(root: Path) -> Path:
+    """Write schema-2 reproduction metadata (no public_commit / no self-ref SHA).
+
+    Final release commit is recorded only in the post-tag Release asset
+    ``release-attestation-vX.Y.Z.json`` (see docs/release-attestation.md).
+    """
     release = root / "results" / "release"
     release.mkdir(parents=True, exist_ok=True)
 
@@ -527,30 +533,29 @@ def write_reproduction(root: Path) -> Path:
     pyproject = (root / "pyproject.toml").read_text(encoding="utf-8")
     ver_m = re.search(r'version\s*=\s*"([^"]+)"', pyproject)
     version = ver_m.group(1) if ver_m else "unknown"
+    tag_name = f"v{version}"
+    attestation_asset = f"release-attestation-{tag_name}.json"
 
-    commit = None
-    try:
-        import subprocess
-
-        proc = subprocess.run(
-            ["git", "-C", str(root), "rev-parse", "HEAD"],
-            capture_output=True,
-            text=True,
-            timeout=30,
-        )
-        if proc.returncode == 0:
-            commit = proc.stdout.strip()
-    except Exception:
-        pass
+    primary = hold.get("holdout_primary_metrics") or {}
+    boot = hold.get("bootstrap") or {}
 
     payload = {
-        "schema": 1,
+        "schema": 2,
         "package": "rag-bench",
         "version": version,
-        "public_commit": commit,
         "recompute_command": "python -m rag_bench.run_all",
         "install": 'pip install -e ".[dev,semantic]"',
         "python_requires": ">=3.11",
+        "commit_binding": {
+            "type": "release-attestation",
+            "asset": attestation_asset,
+            "reason": (
+                "The final release commit is recorded after tag creation in the "
+                "GitHub Release attestation asset to avoid a tracked-file "
+                "self-reference loop. Tracked reproduction.json describes the "
+                "recompute protocol and gate snapshot only."
+            ),
+        },
         "gates": {
             "regression_recall_hits": reg.get("recall_hits"),
             "regression_attribution_hits": reg.get("attribution_hits"),
@@ -560,9 +565,12 @@ def write_reproduction(root: Path) -> Path:
             ),
             "holdout_pass": hold.get("pass"),
             "holdout_winner": hold.get("winner_id"),
-            "holdout_recall_at_k": (hold.get("holdout_primary_metrics") or {}).get(
-                "recall_at_k"
-            ),
+            "holdout_recall_at_k": primary.get("recall_at_k"),
+            "holdout_attribution_rate": primary.get("attribution_rate"),
+            "re_ranked_on_holdout": hold.get("re_ranked_on_holdout"),
+            "bootstrap_point_delta": boot.get("point_delta"),
+            "bootstrap_ci_low": boot.get("ci_low"),
+            "bootstrap_ci_high": boot.get("ci_high"),
             "concurrency_ok": conc.get("ok"),
             "concurrency_n_ok": conc.get("n_ok"),
             "concurrency_cross_talk": conc.get("cross_talk"),
@@ -575,9 +583,14 @@ def write_reproduction(root: Path) -> Path:
             "regression_metrics": "results/regression_metrics.json",
             "holdout_confirmation": "results/holdout_confirmation.json",
             "quality_report": "results/quality_report.json",
+            "recovery_report": "results/recovery_report.json",
+            "concurrency_report": "results/concurrency_report.json",
+            "freeze_report": "results/freeze_report.json",
             "security_scan": "results/release/security-scan.json",
         },
     }
+    # Schema 2 forbids ambiguous commit fields
+    assert "public_commit" not in payload
     out = release / "reproduction.json"
     out.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     return out
@@ -646,10 +659,15 @@ def main(argv: list[str] | None = None) -> int:
         "path_hit_details": scan["path_hit_details"] if not scan["pass"] else [],
         "pass": scan["pass"],
     }
-    scan_path.write_text(json.dumps(out_scan, indent=2) + "\n", encoding="utf-8")
+    # --scan-only must not dirty the working tree (full-recompute git diff gate).
+    if not args.scan_only:
+        scan_path.write_text(json.dumps(out_scan, indent=2) + "\n", encoding="utf-8")
+        dest = str(scan_path)
+    else:
+        dest = "(not written; --scan-only)"
     print(
         f"scan: path_hits={scan['path_hits']} secrets={scan['high_confidence_secrets']} "
-        f"pass={scan['pass']} -> {scan_path}"
+        f"pass={scan['pass']} -> {dest}"
     )
     if not scan["pass"]:
         for h in (scan.get("path_hit_details") or [])[:20]:

@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Name | rag-bench synthetic company handbook corpus |
-| Version | 0.2.0 (paired with package release) |
+| Version | 0.2.1 (paired with package release) |
 | Type | Synthetic text only — fictional policies and products |
 | Language | English |
 | License | MIT (same as repository) |

@@ -173,15 +173,38 @@ def verify() -> dict[str, Any]:
         if len(clist) != 11:
             errors.append(f"categories expected 11, found {len(clist)}")
 
+    # Preserve freeze() field names so public evidence / recompute stay stable.
+    cfg_hashes: dict[str, str] = {}
+    for name in ("categories.yaml", "arms.yaml", "selection_rules.yaml"):
+        p = CONFIG_DIR / name
+        if p.exists():
+            cfg_hashes[name] = sha256_text_file(p)
+    src_hash = (
+        sha256_text_file(SOURCE_V1) if SOURCE_V1.exists() else manifest.get("source_sha256")
+    )
+    labels_v2_hash = (
+        sha256_text_file(DATA_DIR / "labels.jsonl")
+        if (DATA_DIR / "labels.jsonl").exists()
+        else None
+    )
     result = {
         "ok": len(errors) == 0,
         "errors": errors,
+        "regression_path": "data/regression_v1/labels.jsonl",
         "n_labels": n,
+        "labels_v1_sha256": src_hash,
+        "labels_jsonl_sha256": labels_v2_hash,
+        "regression_sha256": actual,
         "labels_sha256": actual,
+        "config_sha256": cfg_hashes,
+        "match_source": actual == src_hash,
         "hash_mode": "lf_normalized",
         "manifest": manifest,
     }
-    FREEZE_REPORT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    # Only rewrite freeze_report when content changes (avoid CRLF/timestamp noise).
+    text = json.dumps(result, indent=2) + "\n"
+    if not FREEZE_REPORT.exists() or FREEZE_REPORT.read_text(encoding="utf-8") != text:
+        FREEZE_REPORT.write_text(text, encoding="utf-8")
     return result
 
 

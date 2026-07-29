@@ -1,15 +1,27 @@
 {
   "ok": true,
+  "errors": [],
   "regression_path": "data/regression_v1/labels.jsonl",
   "n_labels": 35,
   "labels_v1_sha256": "d3ae5556503d606c68a3682c0db5721722f5ef06987268ecb19412f2e4f50cb7",
   "labels_jsonl_sha256": "28b8ba468f7f3e901b24289c90a0d687fcd5de5f2fbe4d6c598bf0fb151ff423",
   "regression_sha256": "d3ae5556503d606c68a3682c0db5721722f5ef06987268ecb19412f2e4f50cb7",
+  "labels_sha256": "d3ae5556503d606c68a3682c0db5721722f5ef06987268ecb19412f2e4f50cb7",
   "config_sha256": {
     "categories.yaml": "d15532a911baddf5c02356794caece6b9e72afbab0520e7367c0b02af03503bc",
     "arms.yaml": "c701201cdbfa3730977d148b23264cf77a5aabab29d3057f5927bc4c298bcf19",
     "selection_rules.yaml": "ab76cb29861f9310746ecb261a02c258499a249ef04693daca94d16b2c57b04b"
   },
   "match_source": true,
-  "hash_mode": "lf_normalized"
+  "hash_mode": "lf_normalized",
+  "manifest": {
+    "schema": 1,
+    "name": "regression-v1",
+    "source": "data/labels_v1.jsonl",
+    "n_labels": 35,
+    "labels_sha256": "d3ae5556503d606c68a3682c0db5721722f5ef06987268ecb19412f2e4f50cb7",
+    "source_sha256": "d3ae5556503d606c68a3682c0db5721722f5ef06987268ecb19412f2e4f50cb7",
+    "immutable": true,
+    "hash_mode": "lf_normalized"
+  }
 }

@@ -2,7 +2,7 @@
   "schema": 1,
   "high_confidence_secrets": 0,
   "path_hits": 0,
-  "files_scanned": 123,
+  "files_scanned": 134,
   "commands": [
     "git log -p --all",
     "python scripts/sanitize_public_tree.py --scan-only",

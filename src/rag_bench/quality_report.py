@@ -69,6 +69,9 @@ def build_quality_report(
         deltas["ci_low"] = hc["bootstrap"].get("ci_low")
         deltas["ci_high"] = hc["bootstrap"].get("ci_high")
 
+    from rag_bench.eval import stable_metrics_for_disk
+
+    # Host RSS / cache size / wall latencies are not release-stable; omit from disk.
     report = {
         "n": n or sum(int((m.get("metrics") or m).get("n") or 0) for m in list(by_arm.values())[:1]),
         "by_arm": {
@@ -82,8 +85,6 @@ def build_quality_report(
                     "unsupported_answer_rate",
                     "error_citation_rate",
                     "refusal_f1",
-                    "latency_p50_ms",
-                    "latency_p95_ms",
                     "n",
                     "n_answerable",
                     "n_unanswerable",
@@ -92,10 +93,6 @@ def build_quality_report(
             for aid, m in by_arm.items()
         },
         "by_category": by_category,
-        "latency_p50_ms": (sum(lat_p50) / len(lat_p50)) if lat_p50 else 0.0,
-        "latency_p95_ms": max(lat_p95) if lat_p95 else 0.0,
-        "peak_rss_mb": _rss_mb(),
-        "index_bytes": _index_bytes_estimate(),
         "selection": {
             "winner_id": selection.get("winner_id")
             or (hc.get("winner_id"))
@@ -105,7 +102,9 @@ def build_quality_report(
             "baseline_arm_id": selection.get("baseline_arm_id") or hc.get("baseline_arm_id"),
             "deltas": deltas,
         },
-        "regression": regression_metrics,
+        "regression": stable_metrics_for_disk(regression_metrics)
+        if isinstance(regression_metrics, dict)
+        else regression_metrics,
         "holdout_confirmation_pass": hc.get("pass") if hc else None,
     }
     path = RESULTS_DIR / "quality_report.json"
