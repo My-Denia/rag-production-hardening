@@ -445,8 +445,11 @@ def run_process_kill_probe(
 
     if write_results:
         out = RESULTS_DIR / "recovery.json"
-        with out.open("w", encoding="utf-8") as f:
-            json.dump(payload, f, indent=2, ensure_ascii=False)
+        # Never persist absolute temp/user paths in results artifacts
+        disk = dict(payload)
+        disk["work_dir"] = "<REDACTED_TEMP_DIR>"
+        with out.open("w", encoding="utf-8", newline="\n") as f:
+            json.dump(disk, f, indent=2, ensure_ascii=False)
             f.write("\n")
     return payload
 

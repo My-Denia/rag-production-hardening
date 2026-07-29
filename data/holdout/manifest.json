@@ -1,7 +1,8 @@
 {
   "schema": 1,
   "n_labels": 38,
-  "labels_sha256": "5ac7cf692ffe0122db338ed8a6e00e23fcf1a1cb2f05b8c154e56193ac4aba40",
+  "labels_sha256": "9120e9a57824c662d5cef7a0d40e58b7c85684a933b3385bfa125e0a721b0dc2",
   "seed": 7,
-  "sealed": true
+  "sealed": true,
+  "hash_mode": "lf_normalized"
 }

@@ -268,7 +268,7 @@ def kill_at_stage(
             and answer_match
             and str(final_state.get("stage", "")).startswith("finalize")
         ),
-        "work_dir": str(td),
+        "work_dir": "<REDACTED_TEMP_DIR>",
         "kill_method": kill_method,
         "worker_exit_code": worker_exit,
     }
@@ -344,7 +344,9 @@ def run_multi_stage_report(*, hold_sec: float = 3.5, write: bool = True) -> dict
     if write:
         ensure_dirs()
         (RESULTS_DIR / "recovery_report.json").write_text(
-            json.dumps(report, indent=2) + "\n", encoding="utf-8"
+            json.dumps(report, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
         )
         # also keep legacy recovery.json from retrieve stage if present
         if stages.get("retrieve"):
@@ -357,9 +359,12 @@ def run_multi_stage_report(*, hold_sec: float = 3.5, write: bool = True) -> dict
                 "hash_match": stages["retrieve"].get("hash_match"),
                 "ok": stages["retrieve"].get("ok"),
                 "multi_stage": True,
+                "work_dir": "<REDACTED_TEMP_DIR>",
             }
             (RESULTS_DIR / "recovery.json").write_text(
-                json.dumps(legacy, indent=2) + "\n", encoding="utf-8"
+                json.dumps(legacy, indent=2) + "\n",
+                encoding="utf-8",
+                newline="\n",
             )
     return report
 

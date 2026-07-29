@@ -465,16 +465,19 @@ def stratified_split(
 
 
 def write_jsonl(path: Path, labels: list[dict[str, Any]]) -> None:
+    """Write JSONL with LF newlines only (stable freeze/holdout hashes)."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
+    # newline="\n" forces LF even on Windows
+    with path.open("w", encoding="utf-8", newline="\n") as f:
         for lab in labels:
             f.write(json.dumps(lab, ensure_ascii=False) + "\n")
 
 
 def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    h.update(path.read_bytes())
-    return h.hexdigest()
+    """LF-normalized content hash (matches freeze_regression / holdout verify)."""
+    from rag_bench.freeze_regression import sha256_text_file
+
+    return sha256_text_file(path)
 
 
 def build_and_split(*, seed: int | None = None) -> dict[str, Any]:

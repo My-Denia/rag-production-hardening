@@ -55,15 +55,14 @@ def load_labels(path: Path | str, *, require_unlock: bool | None = None) -> list
 
 
 def holdout_bytes_sha256() -> str:
-    import hashlib
+    """LF-normalized content hash (stable under Windows autocrlf)."""
+    from rag_bench.freeze_regression import sha256_text_file
 
-    h = hashlib.sha256()
-    h.update(HOLDOUT_LABELS.read_bytes())
-    return h.hexdigest()
+    return sha256_text_file(HOLDOUT_LABELS)
 
 
 def verify_holdout_immutable() -> bool:
-    """True if holdout file bytes match manifest sha."""
+    """True if holdout LF-normalized content matches manifest sha."""
     if not HOLDOUT_LABELS.exists() or not HOLDOUT_MANIFEST.exists():
         return False
     manifest = json.loads(HOLDOUT_MANIFEST.read_text(encoding="utf-8"))
