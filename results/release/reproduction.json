@@ -2,7 +2,7 @@
   "schema": 1,
   "package": "rag-bench",
   "version": "0.2.0",
-  "public_commit": "SEE_GIT_HEAD",
+  "public_commit": "14b4589b7ac5ca294dc676b9e1e70b8a8157019c",
   "recompute_command": "python -m rag_bench.run_all",
   "install": "pip install -e \".[dev,semantic]\"",
   "python_requires": ">=3.11",

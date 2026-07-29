@@ -1,0 +1,28 @@
+# Normalize text to LF in the repository so freeze SHA-256 is stable
+# across Windows (core.autocrlf=true) and Unix checkouts.
+
+* text=auto eol=lf
+
+# Explicit text paths used by freeze / metrics / docs
+*.py      text eol=lf
+*.md      text eol=lf
+*.json    text eol=lf
+*.jsonl   text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.toml    text eol=lf
+*.txt     text eol=lf
+*.csv     text eol=lf
+*.cff     text eol=lf
+*.sha256  text eol=lf
+.gitignore text eol=lf
+LICENSE    text eol=lf
+
+data/**        text eol=lf
+results/**     text eol=lf
+config/**      text eol=lf
+docs/**        text eol=lf
+src/**         text eol=lf
+tests/**       text eol=lf
+scripts/**     text eol=lf
+.github/**     text eol=lf

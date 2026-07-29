@@ -102,6 +102,18 @@ retrieve → rerank → generate → finalize
 | Holdout confirmation | `results/holdout_confirmation.json` |
 | Quality report | `results/quality_report.json` |
 | Regression | `results/regression_metrics.json` |
+
+### Recomputed release snapshot (honest)
+
+| Gate | Value (this package) |
+| --- | --- |
+| Dual regression-v1 | `recall_hits=35`, `attribution_hits=35` |
+| Holdout winner | `recursive_minilm_k8_r1` (`pass=true`) |
+| Holdout primary `recall_at_k` | `1.0` |
+| Holdout primary `attribution_rate` | **≈0.939** (`0.939393…`, not 0.909) |
+| Concurrency | `n_ok=20`, `cross_talk=0` |
+
+Numbers above are from the public recompute evidence under `results/`; re-run `python -m rag_bench.run_all` to refresh.
 | Recovery | `results/recovery_report.json` |
 | Concurrency | `results/concurrency_report.json` |
 | Determinism | `results/determinism_check.json` |

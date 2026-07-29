@@ -18,7 +18,14 @@ FREEZE_REPORT = RESULTS_DIR / "freeze_report.json"
 SOURCE_V1 = DATA_DIR / "labels_v1.jsonl"
 
 
+def normalize_newlines(data: bytes) -> bytes:
+    """Universal-newline normalize to LF for stable content hashes across OSes."""
+    # CRLF → LF, then lone CR → LF
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
 def sha256_file(path: Path) -> str:
+    """Raw byte SHA-256 (no newline normalization). Prefer sha256_text_file for fixtures."""
     h = hashlib.sha256()
     with path.open("rb") as f:
         for chunk in iter(lambda: f.read(65536), b""):
@@ -30,6 +37,16 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def sha256_text_file(path: Path) -> str:
+    """SHA-256 of file content after normalizing newlines to LF.
+
+    Windows checkouts with core.autocrlf=true may materialize CRLF on disk while
+    git stores LF. Freeze manifests record the LF-normalized hash so verify() is
+    stable on both LF and CRLF working trees.
+    """
+    return sha256_bytes(normalize_newlines(path.read_bytes()))
+
+
 def freeze(force: bool = False) -> dict[str, Any]:
     """Copy labels_v1 → regression_v1 and write manifest. Refuse overwrite unless force."""
     ensure_dirs()
@@ -37,12 +54,12 @@ def freeze(force: bool = False) -> dict[str, Any]:
         raise FileNotFoundError(f"missing {SOURCE_V1}")
     REGRESSION_DIR.mkdir(parents=True, exist_ok=True)
 
-    src_hash = sha256_file(SOURCE_V1)
-    src_bytes = SOURCE_V1.read_bytes()
+    src_hash = sha256_text_file(SOURCE_V1)
+    src_bytes = normalize_newlines(SOURCE_V1.read_bytes())
     n = sum(1 for line in src_bytes.splitlines() if line.strip())
 
     if REGRESSION_LABELS.exists() and not force:
-        existing = sha256_file(REGRESSION_LABELS)
+        existing = sha256_text_file(REGRESSION_LABELS)
         if existing != src_hash:
             # immutability: never overwrite divergent freeze
             report = {
@@ -50,22 +67,28 @@ def freeze(force: bool = False) -> dict[str, Any]:
                 "error": "regression-v1 already frozen with different hash; refuse overwrite",
                 "existing_sha256": existing,
                 "source_sha256": src_hash,
+                "hash_mode": "lf_normalized",
             }
             FREEZE_REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
             return report
         # same content — refresh manifest only
     else:
-        shutil.copy2(SOURCE_V1, REGRESSION_LABELS)
+        # Write LF-normalized bytes so working tree matches manifest hash mode
+        REGRESSION_LABELS.write_bytes(src_bytes)
 
-    labels_hash = sha256_file(REGRESSION_LABELS)
-    # also hash related frozen configs snapshot
+    labels_hash = sha256_text_file(REGRESSION_LABELS)
+    # also hash related frozen configs snapshot (LF-normalized)
     cfg_hashes = {}
     for name in ("categories.yaml", "arms.yaml", "selection_rules.yaml"):
         p = CONFIG_DIR / name
         if p.exists():
-            cfg_hashes[name] = sha256_file(p)
+            cfg_hashes[name] = sha256_text_file(p)
 
-    labels_v2_hash = sha256_file(DATA_DIR / "labels.jsonl") if (DATA_DIR / "labels.jsonl").exists() else None
+    labels_v2_hash = (
+        sha256_text_file(DATA_DIR / "labels.jsonl")
+        if (DATA_DIR / "labels.jsonl").exists()
+        else None
+    )
 
     manifest = {
         "schema": 1,
@@ -75,25 +98,27 @@ def freeze(force: bool = False) -> dict[str, Any]:
         "labels_sha256": labels_hash,
         "source_sha256": src_hash,
         "immutable": True,
+        "hash_mode": "lf_normalized",
     }
     REGRESSION_MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     report = {
         "ok": True,
-        "regression_path": str(REGRESSION_LABELS),
+        "regression_path": "data/regression_v1/labels.jsonl",
         "n_labels": n,
         "labels_v1_sha256": src_hash,
         "labels_jsonl_sha256": labels_v2_hash,
         "regression_sha256": labels_hash,
         "config_sha256": cfg_hashes,
         "match_source": labels_hash == src_hash,
+        "hash_mode": "lf_normalized",
     }
     FREEZE_REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     return report
 
 
 def verify() -> dict[str, Any]:
-    """Verify regression-v1 exists, n==35, SHA matches manifest."""
+    """Verify regression-v1 exists, n==35, LF-normalized SHA matches manifest."""
     ensure_dirs()
     errors: list[str] = []
     if not REGRESSION_LABELS.exists():
@@ -104,10 +129,17 @@ def verify() -> dict[str, Any]:
         return {"ok": False, "errors": errors}
 
     manifest = json.loads(REGRESSION_MANIFEST.read_text(encoding="utf-8"))
-    actual = sha256_file(REGRESSION_LABELS)
-    n = sum(1 for line in REGRESSION_LABELS.read_text(encoding="utf-8").splitlines() if line.strip())
+    # LF-normalized hash: equal for CRLF and LF working trees with same logical lines
+    actual = sha256_text_file(REGRESSION_LABELS)
+    n = sum(
+        1
+        for line in normalize_newlines(REGRESSION_LABELS.read_bytes()).splitlines()
+        if line.strip()
+    )
     if actual != manifest.get("labels_sha256"):
-        errors.append(f"sha mismatch: actual={actual} manifest={manifest.get('labels_sha256')}")
+        errors.append(
+            f"sha mismatch: actual={actual} manifest={manifest.get('labels_sha256')}"
+        )
     if n != 35:
         errors.append(f"expected 35 labels, found {n}")
     if n != manifest.get("n_labels"):
@@ -146,6 +178,7 @@ def verify() -> dict[str, Any]:
         "errors": errors,
         "n_labels": n,
         "labels_sha256": actual,
+        "hash_mode": "lf_normalized",
         "manifest": manifest,
     }
     FREEZE_REPORT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
